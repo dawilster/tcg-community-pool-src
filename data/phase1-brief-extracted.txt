@@ -1,0 +1,313 @@
+[0] TCG COMMUNITY POOL
+[1] Phase 1 Website & Future Contributor System
+Instruction Pack
+[2] Prepared for Will and an AI web builder
+[4] This document is the source-of-truth brief for the next website build. The Community Pool metaphor is the organising principle for the entire business and website: new players need a safe place to test the waters and learn to swim, while people with excess cards need a shared pool they can use instead of building and maintaining their own store. Phase 1 should be lean, usable and testable; future contributor features should inform the architecture, but should not delay launch.
+[6] Companion inputs to provide with this brief:
+• Full current inventory export
+• Mock four-contributor split inventory
+• TCG Community Pool logo/brand assets
+[8] 1. Build principles
+[9] Phase 1 is an owned-inventory ecommerce proof, but it should already communicate the full Community Pool idea: a shared, maintained place where players can learn, play, buy, collect and eventually contribute cards without needing to build their own infrastructure.
+[10] Do not over-engineer the launch. If a process can be reconciled manually during testing, that is acceptable.
+[11] The site should feel welcoming to a person who has never played Magic before, while still being useful to experienced players looking for singles or set cards.
+[12] The public-facing experience is organised around user intent: play, collect, buy singles, contribute.
+[13] Inventory must be the source of truth. Counts such as 'cards currently swimming' should be generated from live inventory, not hard-coded.
+[14] Curated products reserve/decrement real inventory. The same physical card cannot be sold twice.
+[15] Future contributor ownership should be anticipated in the data model, but the full contributor portal is Phase 2.
+[16] Do not build features simply because an AI prototype suggested them. Every Phase 1 feature should serve a defined customer journey or an operational test.
+[17] 2. The Community Pool analogy, brand and business model
+[18] The metaphor is the business model, not just the branding.
+[19] The problem we are solving. Magic: The Gathering has a steep first step. New players often discover the game through a set, character or universe they already love, but there is very little soft entry between “I’m interested” and “buy a full deck at a premium price, learn a complex set of rules and play-style tactics, then head to your local game store to play, where, even in a friendly setting, you’re still very likely to get badly beaten.” There is no obvious swim school: no simple place to test the waters, learn at a comfortable pace/budget and understand what comes next.
+[20] At the other end of the player journey, established players accumulate large amounts of bulk. Most of those cards are still perfectly usable, but they are difficult and inefficient to sell individually. A player can create marketplace listings, build their own store, price every card, manage inventory, pick and pack orders, handle postage and maintain listings, but for most people that is far too much work. The result is that thousands of playable cards simply sit in boxes as dead stock.
+[21] The same fragmented market also creates a problem for buyers. Someone may only want a handful of low-value cards worth 25 or 50 cents each, but finding those exact cards can mean buying from several different sellers and paying postage multiple times or going to a premium singles seller like MTGMate where a floor value of $1 is applied to every card. Very quickly, the shipping costs become worth far more than the cards themselves, turning what should have been a cheap purchase into an unreasonable one.
+[22] There is also a product gap in the way lower-value cards are used. Commander, currently one of Magic’s most visible formats, generally only allows one copy of each non-basic card, which naturally limits demand for duplicate commons and uncommons. Standard, by contrast, allows up to four copies of the same card and is becoming increasingly visible to newer players, particularly through MTG Arena. Yet ready-to-play Standard decks are poorly represented as an ongoing retail product.
+[23] That creates an opportunity. By centralising and turning low-value bulk cards into thoughtfully designed beginner products — such as Pool Party modules (similar to the existing Jumpstart product), casual starter decks and Standard-legal starter decks — Community Pool can give new players an easier way into the game while also creating genuine demand for cards that would otherwise struggle to move.
+[24] The result is a model that solves several problems at once: new players get a softer entry into Magic, buyers get access to a broad catalogue through one store and one postage cost, and existing players gain a future pathway for turning unwanted bulk into useful inventory instead of dead stock.
+[25] The Community Pool solution. A person who wants to swim does not need to build a pool in their backyard, install filtration, maintain the water, build a slide, hire a swimming teacher and run a snack bar. They can go to the community pool, where the infrastructure already exists and someone else takes care of the maintenance.
+[26] TCG Community Pool is the same idea applied directly to trading cards. New players come to one place to test the waters, learn to play and find their next step. Collectors can browse sets. Players can buy singles from one shared catalogue. Later, contributors can place their unwanted cards into the same Pool and let Community Pool handle the difficult work of cataloguing, pricing, storing, selling, fulfilling and tracking them, and the contributor gets paid when their cards move on.
+[27] The Pool therefore connects both sides of the same ecosystem: it helps create and support players, then gives those players somewhere useful to send the excess cards they eventually accumulate.
+[28] This metaphor should be obvious from the first screen of the website. A user should quickly understand that Community Pool is both a beginner-friendly place to enter the game and, in the long term, shared infrastructure that lets ordinary players sell through an existing system rather than becoming retailers themselves.
+[29] Phase 1 business model. At launch, Community Pool sells Jamie's owned Magic inventory only. This is intentionally a live proof of the storefront, products, inventory controls and customer journey. The contributor system is not publicly active yet, but the website should explain the long-term model and the backend should be tested with mock contributors.
+[30] Future business model. Once the model is proven, Community Pool becomes the maintained shared pool: contributors provide cards, Community Pool provides the infrastructure and customer base, and creates curated ways to move cards rather than just selling singles, and contributors receive a payout when eligible inventory sells under the agreed FIFO/payout rules.
+[31] Brand and marketing tone
+[32] Friendly, playful, clear and beginner-safe; never condescending.
+[33] Use pool/swimming language where it feels natural, but do not make every sentence a pun.
+[34] Avoid dense card-game jargon unless it is explained.
+[35] Visual identity should feel bright, communal and approachable rather than dark, hyper-competitive or casino-like.
+[36] The site should repeatedly answer: What is this? Who is it for? What do I do next?
+[37] Education is part of the product, not a separate afterthought.
+[38] Current working product prices
+[40] Important: Accessory bundles are contextual upgrades attached to a deck or Pool Party purchase. Do not list the deck/Pool Party bundles as generic products on the Swimming Accessories page.
+[42] 3. Phase 1 public website: complete site map
+[43] 3.1 Global navigation
+[44] Home
+[45] I Want to Play
+[46] I Want to Collect
+[47] The Singles Case
+[48] I Want to Contribute
+[49] About
+[50] Learn to Swim
+[51] Swimming Accessories
+[52] Cart / Checkout
+[53] Customer account/login if required by the ecommerce implementation
+[54] Navigation priority: The four core homepage paths are Play, Collect, Singles and Contribute. The other pages remain accessible through the main menu/header.
+[55] 3.2 Home page
+[56] Prominent live 'Swimming Count' showing total active physical inventory, e.g. '4,985 cards currently swimming'. This should immediately reinforce that the Pool is a live shared inventory, not just a brand name. The count must update from inventory.
+[57] Four primary visual slides/cards: 1. I Want to Play; 2. I Want to Collect; 3. The Singles Case; 4. I Want to Contribute.
+[58] Short, plain-English supporting copy beneath each choice.
+[59] Persistent or highly visible 'Where do I start?' / 'New to Magic?' entry point that sends new players into the guided journey.
+[60] Homepage positioning requirement: before a visitor chooses a path, the page should make the core promise clear - you do not need to know how to play, and you do not need to build your own card-selling operation. The Community Pool provides the place, the lessons, the products and eventually the selling infrastructure.
+[61] 3.3 I Want to Play
+[62] Purpose. This page sells curated gameplay products and guides a new player from first game through constructed play and eventually organized Standard.
+[63] Default product order
+[64] 1. Pool Party Pack - first recommended product for two people learning together. Contains 4 x 20-card modules that are interchangeable – combine any two and start to play. Quickest gameplay option.
+[65] 2. Pool Party Floaties - add 2 more 20-card modules and expand the number of mix-and-match combinations.
+[66] 3. Beginner Casual Deck - Built for casual/kitchen-table play rather than a sanctioned rotating format. Uses normal 60-card constructed conventions but can draw from the wider Community Pool inventory. For those ready to extend gameplay or get more intimate playstyle of a specific color/deck.
+[67] 4. Beginner Standard Deck - currently Standard-legal 60-card deck for a player ready to play Standard at a local game store through organized events.
+[68] 5. Singles / upgrades - continue improving, personalizing or building new decks.
+[69] New-player journey mode
+[70] Include a clear button or section: New to Magic? Start here.
+[72] Product browsing. Experienced users must be able to ignore the guided journey and browse featured decks immediately. Do not force every visitor through an onboarding wizard.
+
+Continue the player journey. We are currently not offering Commander decks as a product as this is something that has significant representation in the market already, but this is the next logical step in the player journey and something that should be mentioned on our site. Eventually we may expand here if we can see that there is substantial demand for it.
+[73] Featured deck listings
+[74] Featured decks can be hooked by colour pair, mechanic, creature type, theme, IP/set flavour, or play style.
+[75] Examples: Goblins, Simic, Lord of the Rings, +1/+1 Counters, Under the Sea, Dinosaurs, Avatar Earthbenders.
+[76] Every deck card/listing should show: deck name, Casual or Standard Legal, colour identity, simple play-style summary, beginner complexity, 60-card list, current price, and whether starter accessories can be added.
+[77] A Standard deck should show the date its legality was last checked and a brief note that Standard rotates and cards may later be banned.
+[78] Where relevant, link the deck to Learn to Swim content explaining the mechanic/colour style using cards from that exact featured deck.
+
+NOTE: For Phase 1 featured decks will be constructed manually from our inventory by Jamie (and designated deck building support tools already available) and uploaded to the site once a week (or as required).
+[79] 3.4 I Want to Collect
+[80] Purpose. Show the depth of Community Pool inventory by set and let collectors buy available portions of a set. Do not hide sparse sets.
+[81] List every set represented in live inventory, even if only a small fraction of the set is available.
+[82] For each set show: set name, total physical cards in stock, unique main-set cards available, main-set size, and percentage available.
+[83] Use the neutral term 'Set Availability' as the default rather than calling every listing 'Near Complete'.
+[84] At the top, feature the three sets with the highest completion percentage.
+[85] Optional badges: High Coverage / Near Complete when genuinely appropriate.
+[86] Clicking a set opens a set page showing the available cards and quantities.
+[87] Include a one-click option such as 'Add one of each available card' / 'Buy available set cards' where operationally practical.
+[88] Do not count duplicate copies as additional completion. Completion is based on unique collector numbers/cards according to the chosen set definition.
+[89] Make clear whether the figure refers to the main set only or includes special/extended subsets.
+[90] 3.5 The Singles Case
+[91] Search by card name.
+[92] Browse by set.
+[93] Sort by collector number, card name and price.
+[94] Filter by colour, rarity, foil/nonfoil, condition, price range and Standard legal status where data permits.
+[95] Each listing must map to actual saleable inventory and show exact printing/collector number/finish/condition as relevant.
+[96] When a quantity reaches zero, the listing must no longer be purchasable.
+[97] Current pricing must come from the Community Pool pricing logic, not hard-coded manual prices wherever automation is possible.
+[98] 3.6 I Want to Contribute - Phase 1 public page
+[99] Phase 1 public status: Coming Soon.
+[100] Explain the future vision in plain English: contributors should not need to build their own online card store any more than someone needs to build a swimming pool in their backyard to go for a swim. They place eligible cards into the Community Pool; Community Pool handles the catalogue, pricing, storage, customer storefront, fulfilment and sale process; contributors receive a payout when their eligible cards sell.
+[101] Explain that the system is currently being tested using simulated contributor inventories before public contribution opens.
+[102] Show a model/example pricing or payout matrix only if clearly labelled as illustrative and subject to change.
+[103] Invite users to follow updates / join an expression-of-interest list if desired.
+[104] Do not promise a launch date, exact payout terms or legal/accounting treatment until finalised.
+[105] 3.7 About
+[106] Explain Community Pool as a direct response to two problems: Magic has no obvious soft-entry 'swim school' for new players, and established players have no simple way to move low-value bulk without effectively becoming retailers themselves.
+[107] Tell the founder/new-player story: returning to Magic through Universes Beyond and encountering the friction of learning formats, finding cards and paying fragmented postage.
+[108] Explain the new-player mission: make Magic easier to start, understand and continue.
+[109] Explain the long-term shared-infrastructure vision: Community Pool maintains the 'pool' so players can use it rather than building their own storefronts, while clearly stating that public contribution is not yet live.
+[110] Link to social accounts, videos and Community Pool updates.
+[111] 3.8 Learn to Swim
+[112] Purpose. A plain-English learning centre that removes jargon and actively supports the products being sold.
+[114] Example teaching style: Instead of 'Simic ramps into big threats', explain: 'Blue-green decks often use early cards to make extra mana or draw more cards, then spend that advantage on larger creatures. In this week's deck, Card A helps you reach Card B a turn earlier.'
+[115] 3.9 Swimming Accessories
+[116] Sell individual accessories: custom dice sets, sleeves, deck boxes, playmats, binders and later other useful beginner accessories.
+[117] Do not offer a generic starter bundle on this page.
+[118] Starter accessory bundles appear only as contextual add-ons to Beginner Decks and Pool Party.
+[119] Keep Phase 1 accessory range intentionally lean.
+[120] 3.10 Cart, checkout and account
+[121] Standard ecommerce cart and checkout.
+[122] Inventory should be validated/reserved at checkout so the same physical stock cannot be oversold.
+[123] Customer account can retain order history and later become the same identity used for contributor functions.
+[124] Architecture should allow future store-credit balance to live on the same account.
+[126] 4. Phase 1 inventory and operational requirements
+[127] Companion data. The build will receive a full current inventory export and a mock four-contributor split version. Use the real inventory to test every workflow.
+[128] 4.1 Minimum card/SKU fields
+[129] Card name
+[130] Set / set code
+[131] Collector number
+[132] Finish (foil/nonfoil)
+[133] Condition
+[134] Quantity
+[135] Current Community Pool sale price
+[136] Standard legality flag where available
+[137] Status / availability
+[138] Optional owner ID and batch ID fields for contributor simulation
+[139] 4.2 Physical SKU vs gameplay identity
+[140] Keep these concepts separate. Physical inventory is identified by exact printing/collector number/finish/condition. Gameplay legality and the four-copy rule operate by card name. An older printing can be Standard legal if that same card name currently has a Standard-legal printing.
+Additional Notes on Standard Legal: Use Scryfall IDs/card data as the source for card metadata such as current format legality, color, rules text and set metadata. Do not infer Standard legality solely from set age or set name.
+[141] 4.3 Curated product inventory
+[142] A Beginner Deck, Pool Party module, Floaties pack or Set Availability product must be assembled from live inventory.
+[143] When stock is allocated to a curated product, the system must prevent that physical quantity from simultaneously being sold elsewhere.
+[144] This is an internal inventory reservation only; contributor FIFO ownership remains separate.
+[145] Selling a curated product decrements all component card quantities.
+[146] If a component becomes unavailable, the curated product should either become unavailable or require a controlled substitution/rebuild.
+[147] 4.4 Pricing
+[148] Current reference value is supplied in the inventory export's 'Purchase price' column for Community Pool testing. Jamie refreshes this field before each new export.
+[149] Working calculation: reference value x 1.15, then map into the current Community Pool pricing matrix.
+[150] Basic lands currently have a working internal/singles value of $0.15 each.
+[151] The pricing matrix may evolve; therefore store pricing logic should be configurable rather than embedded across many pages/components.
+[153] 5. Future contributor system - Phase 2 target
+[154] Purpose of this section. Do not build all of this for Phase 1. Use it to avoid architectural dead ends and to understand what the eventual contributor experience must support.
+[155] 5.1 Core ownership model
+[156] Multiple contributors can own quantities of the same exact saleable SKU.
+[157] Each contribution enters through an intake batch with an intake/receipt date.
+[158] FIFO determines which contributor receives the payout when one unit of that SKU sells.
+[159] Physical fulfilment and contributor ownership are separate. If one of five identical copies is placed into a curated deck, that does not mean the first FIFO contributor's specific card is 'reserved'.
+[160] A contributor only needs to know whether their quantity is still swimming or has sold. Internal reservation state is not inherently contributor-facing.
+[161] FIFO should be applied consistently regardless of sale channel: single, deck, Pool Party, Floaties, Set Availability bundle, etc.
+[162] 5.2 Eventual contributor portal: My Pool
+[163] Recommended customer-facing name: My Pool.
+[164] Dashboard
+[165] Cards currently swimming
+[166] Recent cards sold
+[167] Pending payout
+[168] Available payout balance
+[169] Store-credit balance
+[170] Lifetime sales / payout summary
+[171] Recent activity
+[172] Your Cards
+[173] Show all active contributed cards currently swimming.
+[174] Search/filter by card, set, batch, FIFO position, age and other useful fields.
+[175] Opening a card should show exact SKU, intake batch, intake date, time in Pool, time remaining to next payout tier if applicable, FIFO position and current estimated payout if sold today.
+[176] Potential payout must be labelled as an estimate because reference prices and payout tiers can change before sale.
+[177] Do not expose other contributors' identities.
+[178] Intake Batches
+[179] Permanent historical list of each batch received.
+[180] Each batch shows received date, intake completion date, submitted/accepted/rejected quantities, active quantity and sold quantity.
+[181] Opening a batch shows its full original card list and current status for every line/copy.
+[182] Historical batch records should not disappear when cards sell.
+[183] Eventually allow download/export of batch receipts/CSV.
+[184] Sales & Payouts
+[185] Permanent sales ledger.
+[186] For each sold card show: exact card/SKU, batch, intake date, sale date, days in Pool when sold, actual sale price, payout rule/tier, payout amount and payout status.
+[187] Show how the card sold: Singles Order, Beginner Casual Deck, Beginner Standard Deck, Pool Party, Floaties, Set Availability bundle, etc.
+[188] Payout states should ultimately distinguish pending, available, paid and converted-to-credit.
+[189] Show total payout balance and available balance.
+[190] Minimum cash withdrawal: $5.
+[191] Allow store-credit conversion; store credit should be usable directly in the normal shop account.
+[192] Account / contributor settings
+[193] Same login/account as the ecommerce store.
+[194] Contact details
+[195] Return/shipping address
+[196] Payout method details
+[197] Notification preferences
+[198] Contributor agreement/version accepted
+[199] Any tax/accounting information later required
+[200] Security/password settings
+[201] 5.3 Future auditability
+[202] Maintain an event/history trail for important inventory changes rather than silently overwriting history.
+[203] Support corrections for cancellations, returns, payment failures, damage, grading changes and stock discrepancies.
+[204] Allow contributor exports of current inventory, batches and payout history.
+[205] Weekly summary notifications are preferable to a notification for every low-value card sale.
+[207] 6. Phase 1 contributor test system - bare minimum
+[208] Goal. Prove the ownership, FIFO and payout logic using Jamie's real 4,985-card inventory split into four simulated contributor inventories. Manual reconciliation is acceptable. A polished public contributor portal is not required for launch.
+[209] 6.1 The four questions Phase 1 must answer
+[210] 1. Who owns the stock?
+[211] 2. When did it enter the Pool?
+[212] 3. Which owner gets paid next when a SKU sells?
+[213] 4. What payout applies when it sells?
+[214] 6.2 Minimum contributor fields
+[216] 6.3 Required Phase 1 behaviour
+[217] Import the mock four-contributor inventory.
+[218] For each exact SKU, order contributor-owned units by intake timestamp.
+[219] When one unit of that SKU sells through any channel, allocate the payout to the oldest eligible contributor unit.
+[220] Decrease that contributor's active quantity by one and create a sale/payout record.
+[221] Do not tie FIFO payout ownership to the specific physical copy picked for fulfilment.
+[222] Curated-product reservation can reduce saleable physical stock without changing which contributor is next in FIFO.
+[223] Allow Jamie/Will to inspect the resulting contributor balance and transaction history, even if this is an admin-only table rather than a customer portal.
+[224] If automation is difficult, produce/export a transaction log that can be reconciled against a spreadsheet.
+[225] 6.4 Nice-to-have in Phase 1, but not launch blockers
+[226] Simple simulated contributor login/view.
+[227] Basic 'My Pool' dashboard.
+[228] Batch drill-down.
+[229] Current estimated payout display.
+[230] Manual cash/store-credit balance field.
+[231] CSV export.
+[232] 6.5 Explicit Phase 1 non-requirements
+[233] Public contributor onboarding
+[234] Automated real-world contributor payments
+[235] Bank integrations
+[236] Tax document generation
+[237] Complex contributor notifications
+[238] Fully automated return/cancellation payout reversals
+[239] Sophisticated contributor analytics
+[240] Perfect automation of every accounting edge case
+[242] 7. Phase 1 acceptance tests
+[243] Use the real inventory and mock contributor split to test these scenarios before launch.
+[244] 1. Homepage swimming count equals the sum of active physical inventory and updates when a sale is processed.
+[245] 2. Customer searches for a single, adds it to cart, completes a test order and inventory decrements correctly.
+[246] 3. Customer buys a 60-card Beginner Deck and all 60 component cards decrement from inventory.
+[247] 4. Customer buys a Pool Party Pack and all 80 component cards decrement correctly.
+[248] 5. A curated product cannot be sold if required component stock is unavailable.
+[249] 6. Set Availability page calculates coverage from unique set cards rather than duplicate quantity.
+[250] 7. Standard Legal filter/label works from card-level legality data rather than set age alone where possible.
+[251] 8. Starter Combo adds the correct contextual accessory bundle and total price.
+[252] 9. Mock contributor sale: a SKU owned by multiple simulated contributors pays the oldest FIFO owner regardless of whether the card sold singly or inside a curated product.
+[253] 10. A second sale of the same SKU pays the next FIFO owner.
+[254] 11. Contributor transaction record captures intake date, sale date, sale price, payout and sale channel.
+[255] 12. No public user can access internal/admin contributor test information.
+[256] 8. Suggested build order
+[257] 1. Import and normalise real inventory.
+[258] 2. Build live stock count, singles browsing/search and basic cart/checkout.
+[259] 3. Build curated-product composition/reservation/decrement logic.
+[260] 4. Build I Want to Play and the new-player journey.
+[261] 5. Build I Want to Collect / Set Availability.
+[262] 6. Build Learn to Swim, About and Swimming Accessories.
+[263] 7. Build public Contribute Coming Soon page.
+[264] 8. Import four-contributor mock split and prove FIFO/payout logic in admin/test mode.
+[265] 9. Only add more contributor UI if the underlying test logic is reliable.
+[266] 10. Launch Phase 1 with owned inventory; continue documenting Phase 2 requirements from real operational experience.
+[267] 9. Final instruction to the AI web builder
+[268] Build the simplest reliable Phase 1 store that delivers the customer journeys in this brief. Treat the Community Pool analogy as the organizing concept for the entire experience, not as decorative branding. The website should make two promises understandable immediately: new players have a safe place to test the waters and learn, and the long-term system gives card owners a shared storefront/infrastructure so they do not need to become retailers themselves. Treat the inventory files as live business data, not decorative demo content. Do not invent additional major product categories or contributor features without a clear requirement. Keep code/data structures extensible enough to add contributor ownership, FIFO and payouts later, but prioritise a functioning owned-stock ecommerce launch and a clear new-player experience.
+
+=== TABLES ===
+--- table 0 ---
+Community pool metaphor | What it means in the business
+Test the waters | Low-risk entry into Magic before a customer knows whether they want to commit.
+Swim school / Learn to Swim | Plain-English education: rules, colours, play styles, keywords and how real decks work.
+Pool Party | The first two-player product: simple mix-and-match play that lets two people learn together.
+Floaties | An easy expansion to Pool Party: more modules, more combinations, more confidence.
+Slides / features | The fun pathways through the site: play, collect, singles and contribute, plus featured decks, themed products and accessories.
+Pool maintenance | The hard operational work Community Pool handles: inventory, pricing, storage, fulfilment, updates and later contributor accounting.
+The community pool itself | One shared storefront and inventory system that many players can use instead of each person building their own store.
+Cards swimming | Cards currently active and available within the Pool.
+Dead stock | Useful cards sitting unused because the owner has no efficient way to sell or redistribute them.
+Contribute / My Pool | The future mechanism that lets players send excess cards into the shared system and receive value when those cards sell.
+--- table 1 ---
+Product | Phase 1 working price | Notes
+Pool Party Pack | $30 | 4 x 20-card mix-and-match modules; 80 cards total.
+Pool Party Floaties | $15 | 2 x 20-card modules; 40 cards total.
+Beginner Casual Deck | $30 | 60-card curated casual deck.
+Beginner Standard Deck | $30 | 60-card currently Standard-legal curated deck.
+Beginner Deck Starter Combo | $49 | $30 deck + $19 contextual accessory bundle.
+Pool Party Starter Combo | $54 | $30 Pool Party + $24 two-player accessory bundle.
+Singles | Dynamic | Priced from current reference value using Community Pool matrix.
+Set Availability | Dynamic | Price based on cards included; shown per set.
+Standalone accessories | Individual pricing | Dice, sleeves, deck boxes, playmats, binders etc. No standalone 'bundle' listing.
+--- table 2 ---
+Starting situation | Recommended journey
+I have a friend/partner/housemate to learn with | Pool Party -> Floaties (optional) -> Beginner Casual -> Beginner Standard -> Singles/upgrades
+I am learning alone or plan to go straight to an LGS | Beginner Casual OR Beginner Standard -> Learn to Swim -> Singles/upgrades
+--- table 3 ---
+Section | Required content
+Learn the Game | Turn structure, phases, drawing, mana, casting, creatures, attacking, blocking, life totals, winning.
+Learn Your Style | Mono-colour identities and all common colour pairs. Explain what the deck actually feels like, not shorthand such as 'ramp/go big'.
+Learn the Language | Keyword and gameplay glossary: deathtouch, vigilance, trample, flying, flash, lifelink, menace, reach, haste, ward, ramp, removal, counters, sacrifice, etc.
+See It in a Deck | Use current featured decks and their real cards to explain a play pattern, interaction or decision.
+--- table 4 ---
+Field | Purpose
+Owner ID | Identifies the simulated contributor.
+Batch ID | Identifies the intake batch.
+Exact SKU | Set + collector number + finish + condition or equivalent unique SKU key.
+Quantity | How many units of this contributor-owned SKU remain active.
+Intake date/time | Creates FIFO order and supports ageing/payout logic.
+Status | At minimum Swimming or Sold; internal inventory may have additional fulfilment states.
+Sale date/time | Recorded when a unit sells.
+Sale channel/product | Single, deck, Pool Party, Floaties, set bundle, etc.
+Sale price | Actual amount attributed to the card under the tested rule.
+Payout amount | Calculated/manual contributor payout for the sold unit.

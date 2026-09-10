@@ -1,0 +1,7244 @@
+{
+  "version": "2026-09-10",
+  "currency": "AUD",
+  "algorithm": {
+    "steps": [
+      "Take inventory Purchase price as referenceAud (Jamie refreshes each export).",
+      "If card is a basic land (Plains/Island/Swamp/Mountain/Forest/Wastes by oracle/name), salePriceAud = 0.15 and skip multiplier/band.",
+      "adjusted = round_half_up(referenceAud * 1.15, 2 cents).",
+      "Find first band where minInclusive <= adjusted <= maxInclusive; salePriceAud = band.salePriceAud.",
+      "If no band matches after rounding, snap up to the next band by minInclusive and log a matrix miss."
+    ],
+    "referenceMultiplier": 1.15,
+    "basicLandSalePriceAud": 0.15,
+    "roundAdjustedToCents": "HALF_UP"
+  },
+  "skuIdentity": {
+    "physicalKey": [
+      "setCode",
+      "collectorNumber",
+      "finish",
+      "condition"
+    ],
+    "finishMap": {
+      "normal": "nonfoil",
+      "foil": "foil"
+    },
+    "conditionMap": {
+      "near_mint": "NM",
+      "lightly_played": "LP",
+      "moderately_played": "MP"
+    },
+    "shopperCase": [
+      "NM",
+      "LP"
+    ],
+    "reviewOnly": [
+      "MP"
+    ]
+  },
+  "standardLegality": "Scryfall card data by Scryfall ID; never infer from set age.",
+  "setAvailability": "unique collector numbers / main-set cards; not quantity",
+  "bands": [
+    {
+      "rangeLabel": "$0.01-$0.10",
+      "minInclusive": 0.01,
+      "maxInclusive": 0.1,
+      "salePriceAud": 0.25,
+      "payoutShare": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      },
+      "payoutAud": {
+        "0_6_months": 0.0625,
+        "6_12_months": 0.05,
+        "12_18_months": 0.0375,
+        "18_24_months": 0.025
+      }
+    },
+    {
+      "rangeLabel": "$0.11-$0.35",
+      "minInclusive": 0.11,
+      "maxInclusive": 0.35,
+      "salePriceAud": 0.5,
+      "payoutShare": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      },
+      "payoutAud": {
+        "0_6_months": 0.125,
+        "6_12_months": 0.1,
+        "12_18_months": 0.075,
+        "18_24_months": 0.05
+      }
+    },
+    {
+      "rangeLabel": "$0.36-$0.65",
+      "minInclusive": 0.36,
+      "maxInclusive": 0.65,
+      "salePriceAud": 0.75,
+      "payoutShare": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      },
+      "payoutAud": {
+        "0_6_months": 0.1875,
+        "6_12_months": 0.15000000000000002,
+        "12_18_months": 0.11249999999999999,
+        "18_24_months": 0.07500000000000001
+      }
+    },
+    {
+      "rangeLabel": "$0.66-$0.90",
+      "minInclusive": 0.66,
+      "maxInclusive": 0.9,
+      "salePriceAud": 1.0,
+      "payoutShare": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      },
+      "payoutAud": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      }
+    },
+    {
+      "rangeLabel": "$0.91-$1.15",
+      "minInclusive": 0.91,
+      "maxInclusive": 1.15,
+      "salePriceAud": 1.25,
+      "payoutShare": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      },
+      "payoutAud": {
+        "0_6_months": 0.3125,
+        "6_12_months": 0.25,
+        "12_18_months": 0.1875,
+        "18_24_months": 0.125
+      }
+    },
+    {
+      "rangeLabel": "$1.16-$1.40",
+      "minInclusive": 1.16,
+      "maxInclusive": 1.4,
+      "salePriceAud": 1.5,
+      "payoutShare": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      },
+      "payoutAud": {
+        "0_6_months": 0.375,
+        "6_12_months": 0.30000000000000004,
+        "12_18_months": 0.22499999999999998,
+        "18_24_months": 0.15000000000000002
+      }
+    },
+    {
+      "rangeLabel": "$1.41-$1.65",
+      "minInclusive": 1.41,
+      "maxInclusive": 1.65,
+      "salePriceAud": 1.75,
+      "payoutShare": {
+        "0_6_months": 0.25,
+        "6_12_months": 0.2,
+        "12_18_months": 0.15,
+        "18_24_months": 0.1
+      },
+      "payoutAud": {
+        "0_6_months": 0.4375,
+        "6_12_months": 0.35000000000000003,
+        "12_18_months": 0.2625,
+        "18_24_months": 0.17500000000000002
+      }
+    },
+    {
+      "rangeLabel": "$1.66-$1.90",
+      "minInclusive": 1.66,
+      "maxInclusive": 1.9,
+      "salePriceAud": 2.0,
+      "payoutShare": {
+        "0_6_months": 0.3,
+        "6_12_months": 0.25,
+        "12_18_months": 0.2,
+        "18_24_months": 0.15
+      },
+      "payoutAud": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.5,
+        "12_18_months": 0.4,
+        "18_24_months": 0.3
+      }
+    },
+    {
+      "rangeLabel": "$1.91-$2.10",
+      "minInclusive": 1.91,
+      "maxInclusive": 2.1,
+      "salePriceAud": 2.25,
+      "payoutShare": {
+        "0_6_months": 0.3,
+        "6_12_months": 0.25,
+        "12_18_months": 0.2,
+        "18_24_months": 0.15
+      },
+      "payoutAud": {
+        "0_6_months": 0.6749999999999999,
+        "6_12_months": 0.5625,
+        "12_18_months": 0.45,
+        "18_24_months": 0.33749999999999997
+      }
+    },
+    {
+      "rangeLabel": "$2.11-$2.35",
+      "minInclusive": 2.11,
+      "maxInclusive": 2.35,
+      "salePriceAud": 2.5,
+      "payoutShare": {
+        "0_6_months": 0.3,
+        "6_12_months": 0.25,
+        "12_18_months": 0.2,
+        "18_24_months": 0.15
+      },
+      "payoutAud": {
+        "0_6_months": 0.75,
+        "6_12_months": 0.625,
+        "12_18_months": 0.5,
+        "18_24_months": 0.375
+      }
+    },
+    {
+      "rangeLabel": "$2.36-$2.60",
+      "minInclusive": 2.36,
+      "maxInclusive": 2.6,
+      "salePriceAud": 2.75,
+      "payoutShare": {
+        "0_6_months": 0.3,
+        "6_12_months": 0.25,
+        "12_18_months": 0.2,
+        "18_24_months": 0.15
+      },
+      "payoutAud": {
+        "0_6_months": 0.825,
+        "6_12_months": 0.6875,
+        "12_18_months": 0.55,
+        "18_24_months": 0.4125
+      }
+    },
+    {
+      "rangeLabel": "$2.61-$2.85",
+      "minInclusive": 2.61,
+      "maxInclusive": 2.85,
+      "salePriceAud": 3.0,
+      "payoutShare": {
+        "0_6_months": 0.35,
+        "6_12_months": 0.3,
+        "12_18_months": 0.25,
+        "18_24_months": 0.2
+      },
+      "payoutAud": {
+        "0_6_months": 1.0499999999999998,
+        "6_12_months": 0.8999999999999999,
+        "12_18_months": 0.75,
+        "18_24_months": 0.6000000000000001
+      }
+    },
+    {
+      "rangeLabel": "$2.86-$3.05",
+      "minInclusive": 2.86,
+      "maxInclusive": 3.05,
+      "salePriceAud": 3.25,
+      "payoutShare": {
+        "0_6_months": 0.35,
+        "6_12_months": 0.3,
+        "12_18_months": 0.25,
+        "18_24_months": 0.2
+      },
+      "payoutAud": {
+        "0_6_months": 1.1375,
+        "6_12_months": 0.975,
+        "12_18_months": 0.8125,
+        "18_24_months": 0.65
+      }
+    },
+    {
+      "rangeLabel": "$3.06-$3.30",
+      "minInclusive": 3.06,
+      "maxInclusive": 3.3,
+      "salePriceAud": 3.5,
+      "payoutShare": {
+        "0_6_months": 0.35,
+        "6_12_months": 0.3,
+        "12_18_months": 0.25,
+        "18_24_months": 0.2
+      },
+      "payoutAud": {
+        "0_6_months": 1.2249999999999999,
+        "6_12_months": 1.05,
+        "12_18_months": 0.875,
+        "18_24_months": 0.7000000000000001
+      }
+    },
+    {
+      "rangeLabel": "$3.31-$3.55",
+      "minInclusive": 3.31,
+      "maxInclusive": 3.55,
+      "salePriceAud": 3.75,
+      "payoutShare": {
+        "0_6_months": 0.35,
+        "6_12_months": 0.3,
+        "12_18_months": 0.25,
+        "18_24_months": 0.2
+      },
+      "payoutAud": {
+        "0_6_months": 1.3125,
+        "6_12_months": 1.125,
+        "12_18_months": 0.9375,
+        "18_24_months": 0.75
+      }
+    },
+    {
+      "rangeLabel": "$3.56-$3.80",
+      "minInclusive": 3.56,
+      "maxInclusive": 3.8,
+      "salePriceAud": 4.0,
+      "payoutShare": {
+        "0_6_months": 0.4,
+        "6_12_months": 0.35,
+        "12_18_months": 0.3,
+        "18_24_months": 0.25
+      },
+      "payoutAud": {
+        "0_6_months": 1.6,
+        "6_12_months": 1.4,
+        "12_18_months": 1.2,
+        "18_24_months": 1.0
+      }
+    },
+    {
+      "rangeLabel": "$3.81-$4.00",
+      "minInclusive": 3.81,
+      "maxInclusive": 4.0,
+      "salePriceAud": 4.25,
+      "payoutShare": {
+        "0_6_months": 0.4,
+        "6_12_months": 0.35,
+        "12_18_months": 0.3,
+        "18_24_months": 0.25
+      },
+      "payoutAud": {
+        "0_6_months": 1.7000000000000002,
+        "6_12_months": 1.4874999999999998,
+        "12_18_months": 1.275,
+        "18_24_months": 1.0625
+      }
+    },
+    {
+      "rangeLabel": "$4.01-$4.25",
+      "minInclusive": 4.01,
+      "maxInclusive": 4.25,
+      "salePriceAud": 4.5,
+      "payoutShare": {
+        "0_6_months": 0.4,
+        "6_12_months": 0.35,
+        "12_18_months": 0.3,
+        "18_24_months": 0.25
+      },
+      "payoutAud": {
+        "0_6_months": 1.8,
+        "6_12_months": 1.575,
+        "12_18_months": 1.3499999999999999,
+        "18_24_months": 1.125
+      }
+    },
+    {
+      "rangeLabel": "$4.26-$4.50",
+      "minInclusive": 4.26,
+      "maxInclusive": 4.5,
+      "salePriceAud": 4.75,
+      "payoutShare": {
+        "0_6_months": 0.4,
+        "6_12_months": 0.35,
+        "12_18_months": 0.3,
+        "18_24_months": 0.25
+      },
+      "payoutAud": {
+        "0_6_months": 1.9000000000000001,
+        "6_12_months": 1.6624999999999999,
+        "12_18_months": 1.425,
+        "18_24_months": 1.1875
+      }
+    },
+    {
+      "rangeLabel": "$4.51-$4.75",
+      "minInclusive": 4.51,
+      "maxInclusive": 4.75,
+      "salePriceAud": 5.0,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 2.25,
+        "6_12_months": 2.0,
+        "12_18_months": 1.75,
+        "18_24_months": 1.5
+      }
+    },
+    {
+      "rangeLabel": "$4.76-$4.95",
+      "minInclusive": 4.76,
+      "maxInclusive": 4.95,
+      "salePriceAud": 5.25,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 2.3625000000000003,
+        "6_12_months": 2.1,
+        "12_18_months": 1.8375,
+        "18_24_months": 1.575
+      }
+    },
+    {
+      "rangeLabel": "$4.96-$5.20",
+      "minInclusive": 4.96,
+      "maxInclusive": 5.2,
+      "salePriceAud": 5.5,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 2.475,
+        "6_12_months": 2.2,
+        "12_18_months": 1.9249999999999998,
+        "18_24_months": 1.65
+      }
+    },
+    {
+      "rangeLabel": "$5.21-$5.45",
+      "minInclusive": 5.21,
+      "maxInclusive": 5.45,
+      "salePriceAud": 5.75,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 2.5875,
+        "6_12_months": 2.3000000000000003,
+        "12_18_months": 2.0124999999999997,
+        "18_24_months": 1.7249999999999999
+      }
+    },
+    {
+      "rangeLabel": "$5.46-$5.70",
+      "minInclusive": 5.46,
+      "maxInclusive": 5.7,
+      "salePriceAud": 6.0,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 2.7,
+        "6_12_months": 2.4000000000000004,
+        "12_18_months": 2.0999999999999996,
+        "18_24_months": 1.7999999999999998
+      }
+    },
+    {
+      "rangeLabel": "$5.71-$5.90",
+      "minInclusive": 5.71,
+      "maxInclusive": 5.9,
+      "salePriceAud": 6.25,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 2.8125,
+        "6_12_months": 2.5,
+        "12_18_months": 2.1875,
+        "18_24_months": 1.875
+      }
+    },
+    {
+      "rangeLabel": "$5.91-$6.15",
+      "minInclusive": 5.91,
+      "maxInclusive": 6.15,
+      "salePriceAud": 6.5,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 2.9250000000000003,
+        "6_12_months": 2.6,
+        "12_18_months": 2.275,
+        "18_24_months": 1.95
+      }
+    },
+    {
+      "rangeLabel": "$6.16-$6.40",
+      "minInclusive": 6.16,
+      "maxInclusive": 6.4,
+      "salePriceAud": 6.75,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 3.0375,
+        "6_12_months": 2.7,
+        "12_18_months": 2.3625,
+        "18_24_months": 2.025
+      }
+    },
+    {
+      "rangeLabel": "$6.41-$6.65",
+      "minInclusive": 6.41,
+      "maxInclusive": 6.65,
+      "salePriceAud": 7.0,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 3.15,
+        "6_12_months": 2.8000000000000003,
+        "12_18_months": 2.4499999999999997,
+        "18_24_months": 2.1
+      }
+    },
+    {
+      "rangeLabel": "$6.66-$6.85",
+      "minInclusive": 6.66,
+      "maxInclusive": 6.85,
+      "salePriceAud": 7.25,
+      "payoutShare": {
+        "0_6_months": 0.45,
+        "6_12_months": 0.4,
+        "12_18_months": 0.35,
+        "18_24_months": 0.3
+      },
+      "payoutAud": {
+        "0_6_months": 3.2625,
+        "6_12_months": 2.9000000000000004,
+        "12_18_months": 2.5374999999999996,
+        "18_24_months": 2.175
+      }
+    },
+    {
+      "rangeLabel": "$6.86-$7.10",
+      "minInclusive": 6.86,
+      "maxInclusive": 7.1,
+      "salePriceAud": 7.5,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 3.75,
+        "6_12_months": 3.375,
+        "12_18_months": 3.0,
+        "18_24_months": 2.625
+      }
+    },
+    {
+      "rangeLabel": "$7.11-$7.35",
+      "minInclusive": 7.11,
+      "maxInclusive": 7.35,
+      "salePriceAud": 7.75,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 3.875,
+        "6_12_months": 3.4875000000000003,
+        "12_18_months": 3.1,
+        "18_24_months": 2.7125
+      }
+    },
+    {
+      "rangeLabel": "$7.36-$7.60",
+      "minInclusive": 7.36,
+      "maxInclusive": 7.6,
+      "salePriceAud": 8.0,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.0,
+        "6_12_months": 3.6,
+        "12_18_months": 3.2,
+        "18_24_months": 2.8
+      }
+    },
+    {
+      "rangeLabel": "$7.61-$7.80",
+      "minInclusive": 7.61,
+      "maxInclusive": 7.8,
+      "salePriceAud": 8.25,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.125,
+        "6_12_months": 3.7125,
+        "12_18_months": 3.3000000000000003,
+        "18_24_months": 2.8874999999999997
+      }
+    },
+    {
+      "rangeLabel": "$7.81-$8.05",
+      "minInclusive": 7.81,
+      "maxInclusive": 8.05,
+      "salePriceAud": 8.5,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.25,
+        "6_12_months": 3.825,
+        "12_18_months": 3.4000000000000004,
+        "18_24_months": 2.9749999999999996
+      }
+    },
+    {
+      "rangeLabel": "$8.06-$8.30",
+      "minInclusive": 8.06,
+      "maxInclusive": 8.3,
+      "salePriceAud": 8.75,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.375,
+        "6_12_months": 3.9375,
+        "12_18_months": 3.5,
+        "18_24_months": 3.0625
+      }
+    },
+    {
+      "rangeLabel": "$8.31-$8.55",
+      "minInclusive": 8.31,
+      "maxInclusive": 8.55,
+      "salePriceAud": 9.0,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.5,
+        "6_12_months": 4.05,
+        "12_18_months": 3.6,
+        "18_24_months": 3.15
+      }
+    },
+    {
+      "rangeLabel": "$8.56-$8.75",
+      "minInclusive": 8.56,
+      "maxInclusive": 8.75,
+      "salePriceAud": 9.25,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.625,
+        "6_12_months": 4.1625000000000005,
+        "12_18_months": 3.7,
+        "18_24_months": 3.2375
+      }
+    },
+    {
+      "rangeLabel": "$8.76-$9.00",
+      "minInclusive": 8.76,
+      "maxInclusive": 9.0,
+      "salePriceAud": 9.5,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.75,
+        "6_12_months": 4.275,
+        "12_18_months": 3.8000000000000003,
+        "18_24_months": 3.3249999999999997
+      }
+    },
+    {
+      "rangeLabel": "$9.01-$9.25",
+      "minInclusive": 9.01,
+      "maxInclusive": 9.25,
+      "salePriceAud": 9.75,
+      "payoutShare": {
+        "0_6_months": 0.5,
+        "6_12_months": 0.45,
+        "12_18_months": 0.4,
+        "18_24_months": 0.35
+      },
+      "payoutAud": {
+        "0_6_months": 4.875,
+        "6_12_months": 4.3875,
+        "12_18_months": 3.9000000000000004,
+        "18_24_months": 3.4124999999999996
+      }
+    },
+    {
+      "rangeLabel": "$9.26-$9.50",
+      "minInclusive": 9.26,
+      "maxInclusive": 9.5,
+      "salePriceAud": 10.0,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 5.5,
+        "6_12_months": 5.0,
+        "12_18_months": 4.5,
+        "18_24_months": 4.0
+      }
+    },
+    {
+      "rangeLabel": "$9.51-$9.70",
+      "minInclusive": 9.51,
+      "maxInclusive": 9.7,
+      "salePriceAud": 10.25,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 5.6375,
+        "6_12_months": 5.125,
+        "12_18_months": 4.6125,
+        "18_24_months": 4.1000000000000005
+      }
+    },
+    {
+      "rangeLabel": "$9.71-$9.95",
+      "minInclusive": 9.71,
+      "maxInclusive": 9.95,
+      "salePriceAud": 10.5,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 5.775,
+        "6_12_months": 5.25,
+        "12_18_months": 4.7250000000000005,
+        "18_24_months": 4.2
+      }
+    },
+    {
+      "rangeLabel": "$9.96-$10.20",
+      "minInclusive": 9.96,
+      "maxInclusive": 10.2,
+      "salePriceAud": 10.75,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 5.9125000000000005,
+        "6_12_months": 5.375,
+        "12_18_months": 4.8375,
+        "18_24_months": 4.3
+      }
+    },
+    {
+      "rangeLabel": "$10.21-$10.45",
+      "minInclusive": 10.21,
+      "maxInclusive": 10.45,
+      "salePriceAud": 11.0,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 6.050000000000001,
+        "6_12_months": 5.5,
+        "12_18_months": 4.95,
+        "18_24_months": 4.4
+      }
+    },
+    {
+      "rangeLabel": "$10.46-$10.65",
+      "minInclusive": 10.46,
+      "maxInclusive": 10.65,
+      "salePriceAud": 11.25,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 6.187500000000001,
+        "6_12_months": 5.625,
+        "12_18_months": 5.0625,
+        "18_24_months": 4.5
+      }
+    },
+    {
+      "rangeLabel": "$10.66-$10.90",
+      "minInclusive": 10.66,
+      "maxInclusive": 10.9,
+      "salePriceAud": 11.5,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 6.325,
+        "6_12_months": 5.75,
+        "12_18_months": 5.175,
+        "18_24_months": 4.6000000000000005
+      }
+    },
+    {
+      "rangeLabel": "$10.91-$11.15",
+      "minInclusive": 10.91,
+      "maxInclusive": 11.15,
+      "salePriceAud": 11.75,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 6.4625,
+        "6_12_months": 5.875,
+        "12_18_months": 5.2875000000000005,
+        "18_24_months": 4.7
+      }
+    },
+    {
+      "rangeLabel": "$11.16-$11.40",
+      "minInclusive": 11.16,
+      "maxInclusive": 11.4,
+      "salePriceAud": 12.0,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 6.6000000000000005,
+        "6_12_months": 6.0,
+        "12_18_months": 5.4,
+        "18_24_months": 4.800000000000001
+      }
+    },
+    {
+      "rangeLabel": "$11.41-$11.60",
+      "minInclusive": 11.41,
+      "maxInclusive": 11.6,
+      "salePriceAud": 12.25,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 6.737500000000001,
+        "6_12_months": 6.125,
+        "12_18_months": 5.5125,
+        "18_24_months": 4.9
+      }
+    },
+    {
+      "rangeLabel": "$11.61-$11.85",
+      "minInclusive": 11.61,
+      "maxInclusive": 11.85,
+      "salePriceAud": 12.5,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 6.875000000000001,
+        "6_12_months": 6.25,
+        "12_18_months": 5.625,
+        "18_24_months": 5.0
+      }
+    },
+    {
+      "rangeLabel": "$11.86-$12.10",
+      "minInclusive": 11.86,
+      "maxInclusive": 12.1,
+      "salePriceAud": 12.75,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.0125,
+        "6_12_months": 6.375,
+        "12_18_months": 5.7375,
+        "18_24_months": 5.1000000000000005
+      }
+    },
+    {
+      "rangeLabel": "$12.11-$12.35",
+      "minInclusive": 12.11,
+      "maxInclusive": 12.35,
+      "salePriceAud": 13.0,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.15,
+        "6_12_months": 6.5,
+        "12_18_months": 5.8500000000000005,
+        "18_24_months": 5.2
+      }
+    },
+    {
+      "rangeLabel": "$12.36-$12.55",
+      "minInclusive": 12.36,
+      "maxInclusive": 12.55,
+      "salePriceAud": 13.25,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.2875000000000005,
+        "6_12_months": 6.625,
+        "12_18_months": 5.9625,
+        "18_24_months": 5.300000000000001
+      }
+    },
+    {
+      "rangeLabel": "$12.56-$12.80",
+      "minInclusive": 12.56,
+      "maxInclusive": 12.8,
+      "salePriceAud": 13.5,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.425000000000001,
+        "6_12_months": 6.75,
+        "12_18_months": 6.075,
+        "18_24_months": 5.4
+      }
+    },
+    {
+      "rangeLabel": "$12.81-$13.05",
+      "minInclusive": 12.81,
+      "maxInclusive": 13.05,
+      "salePriceAud": 13.75,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.562500000000001,
+        "6_12_months": 6.875,
+        "12_18_months": 6.1875,
+        "18_24_months": 5.5
+      }
+    },
+    {
+      "rangeLabel": "$13.06-$13.30",
+      "minInclusive": 13.06,
+      "maxInclusive": 13.3,
+      "salePriceAud": 14.0,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.700000000000001,
+        "6_12_months": 7.0,
+        "12_18_months": 6.3,
+        "18_24_months": 5.6000000000000005
+      }
+    },
+    {
+      "rangeLabel": "$13.31-$13.50",
+      "minInclusive": 13.31,
+      "maxInclusive": 13.5,
+      "salePriceAud": 14.25,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.8375,
+        "6_12_months": 7.125,
+        "12_18_months": 6.4125000000000005,
+        "18_24_months": 5.7
+      }
+    },
+    {
+      "rangeLabel": "$13.51-$13.75",
+      "minInclusive": 13.51,
+      "maxInclusive": 13.75,
+      "salePriceAud": 14.5,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 7.9750000000000005,
+        "6_12_months": 7.25,
+        "12_18_months": 6.525,
+        "18_24_months": 5.800000000000001
+      }
+    },
+    {
+      "rangeLabel": "$13.76-$14.00",
+      "minInclusive": 13.76,
+      "maxInclusive": 14.0,
+      "salePriceAud": 14.75,
+      "payoutShare": {
+        "0_6_months": 0.55,
+        "6_12_months": 0.5,
+        "12_18_months": 0.45,
+        "18_24_months": 0.4
+      },
+      "payoutAud": {
+        "0_6_months": 8.1125,
+        "6_12_months": 7.375,
+        "12_18_months": 6.6375,
+        "18_24_months": 5.9
+      }
+    },
+    {
+      "rangeLabel": "$14.01-$14.25",
+      "minInclusive": 14.01,
+      "maxInclusive": 14.25,
+      "salePriceAud": 15.0,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 9.0,
+        "6_12_months": 8.25,
+        "12_18_months": 7.5,
+        "18_24_months": 6.75
+      }
+    },
+    {
+      "rangeLabel": "$14.26-$14.45",
+      "minInclusive": 14.26,
+      "maxInclusive": 14.45,
+      "salePriceAud": 15.25,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 9.15,
+        "6_12_months": 8.387500000000001,
+        "12_18_months": 7.625,
+        "18_24_months": 6.8625
+      }
+    },
+    {
+      "rangeLabel": "$14.46-$14.70",
+      "minInclusive": 14.46,
+      "maxInclusive": 14.7,
+      "salePriceAud": 15.5,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 9.299999999999999,
+        "6_12_months": 8.525,
+        "12_18_months": 7.75,
+        "18_24_months": 6.9750000000000005
+      }
+    },
+    {
+      "rangeLabel": "$14.71-$14.95",
+      "minInclusive": 14.71,
+      "maxInclusive": 14.95,
+      "salePriceAud": 15.75,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 9.45,
+        "6_12_months": 8.662500000000001,
+        "12_18_months": 7.875,
+        "18_24_months": 7.0875
+      }
+    },
+    {
+      "rangeLabel": "$14.96-$15.20",
+      "minInclusive": 14.96,
+      "maxInclusive": 15.2,
+      "salePriceAud": 16.0,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 9.6,
+        "6_12_months": 8.8,
+        "12_18_months": 8.0,
+        "18_24_months": 7.2
+      }
+    },
+    {
+      "rangeLabel": "$15.21-$15.40",
+      "minInclusive": 15.21,
+      "maxInclusive": 15.4,
+      "salePriceAud": 16.25,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 9.75,
+        "6_12_months": 8.9375,
+        "12_18_months": 8.125,
+        "18_24_months": 7.3125
+      }
+    },
+    {
+      "rangeLabel": "$15.41-$15.65",
+      "minInclusive": 15.41,
+      "maxInclusive": 15.65,
+      "salePriceAud": 16.5,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 9.9,
+        "6_12_months": 9.075000000000001,
+        "12_18_months": 8.25,
+        "18_24_months": 7.425
+      }
+    },
+    {
+      "rangeLabel": "$15.66-$15.90",
+      "minInclusive": 15.66,
+      "maxInclusive": 15.9,
+      "salePriceAud": 16.75,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 10.049999999999999,
+        "6_12_months": 9.2125,
+        "12_18_months": 8.375,
+        "18_24_months": 7.5375000000000005
+      }
+    },
+    {
+      "rangeLabel": "$15.91-$16.15",
+      "minInclusive": 15.91,
+      "maxInclusive": 16.15,
+      "salePriceAud": 17.0,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 10.2,
+        "6_12_months": 9.350000000000001,
+        "12_18_months": 8.5,
+        "18_24_months": 7.65
+      }
+    },
+    {
+      "rangeLabel": "$16.16-$16.35",
+      "minInclusive": 16.16,
+      "maxInclusive": 16.35,
+      "salePriceAud": 17.25,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 10.35,
+        "6_12_months": 9.4875,
+        "12_18_months": 8.625,
+        "18_24_months": 7.7625
+      }
+    },
+    {
+      "rangeLabel": "$16.36-$16.60",
+      "minInclusive": 16.36,
+      "maxInclusive": 16.6,
+      "salePriceAud": 17.5,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 10.5,
+        "6_12_months": 9.625,
+        "12_18_months": 8.75,
+        "18_24_months": 7.875
+      }
+    },
+    {
+      "rangeLabel": "$16.61-$16.85",
+      "minInclusive": 16.61,
+      "maxInclusive": 16.85,
+      "salePriceAud": 17.75,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 10.65,
+        "6_12_months": 9.762500000000001,
+        "12_18_months": 8.875,
+        "18_24_months": 7.9875
+      }
+    },
+    {
+      "rangeLabel": "$16.86-$17.10",
+      "minInclusive": 16.86,
+      "maxInclusive": 17.1,
+      "salePriceAud": 18.0,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 10.799999999999999,
+        "6_12_months": 9.9,
+        "12_18_months": 9.0,
+        "18_24_months": 8.1
+      }
+    },
+    {
+      "rangeLabel": "$17.11-$17.30",
+      "minInclusive": 17.11,
+      "maxInclusive": 17.3,
+      "salePriceAud": 18.25,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 10.95,
+        "6_12_months": 10.037500000000001,
+        "12_18_months": 9.125,
+        "18_24_months": 8.2125
+      }
+    },
+    {
+      "rangeLabel": "$17.31-$17.55",
+      "minInclusive": 17.31,
+      "maxInclusive": 17.55,
+      "salePriceAud": 18.5,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 11.1,
+        "6_12_months": 10.175,
+        "12_18_months": 9.25,
+        "18_24_months": 8.325000000000001
+      }
+    },
+    {
+      "rangeLabel": "$17.56-$17.80",
+      "minInclusive": 17.56,
+      "maxInclusive": 17.8,
+      "salePriceAud": 18.75,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 11.25,
+        "6_12_months": 10.3125,
+        "12_18_months": 9.375,
+        "18_24_months": 8.4375
+      }
+    },
+    {
+      "rangeLabel": "$17.81-$18.05",
+      "minInclusive": 17.81,
+      "maxInclusive": 18.05,
+      "salePriceAud": 19.0,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 11.4,
+        "6_12_months": 10.450000000000001,
+        "12_18_months": 9.5,
+        "18_24_months": 8.55
+      }
+    },
+    {
+      "rangeLabel": "$18.06-$18.25",
+      "minInclusive": 18.06,
+      "maxInclusive": 18.25,
+      "salePriceAud": 19.25,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 11.549999999999999,
+        "6_12_months": 10.5875,
+        "12_18_months": 9.625,
+        "18_24_months": 8.6625
+      }
+    },
+    {
+      "rangeLabel": "$18.26-$18.50",
+      "minInclusive": 18.26,
+      "maxInclusive": 18.5,
+      "salePriceAud": 19.5,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 11.7,
+        "6_12_months": 10.725000000000001,
+        "12_18_months": 9.75,
+        "18_24_months": 8.775
+      }
+    },
+    {
+      "rangeLabel": "$18.51-$18.75",
+      "minInclusive": 18.51,
+      "maxInclusive": 18.75,
+      "salePriceAud": 19.75,
+      "payoutShare": {
+        "0_6_months": 0.6,
+        "6_12_months": 0.55,
+        "12_18_months": 0.5,
+        "18_24_months": 0.45
+      },
+      "payoutAud": {
+        "0_6_months": 11.85,
+        "6_12_months": 10.8625,
+        "12_18_months": 9.875,
+        "18_24_months": 8.887500000000001
+      }
+    },
+    {
+      "rangeLabel": "$18.76-$19.00",
+      "minInclusive": 18.76,
+      "maxInclusive": 19.0,
+      "salePriceAud": 20.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 13.0,
+        "6_12_months": 12.0,
+        "12_18_months": 11.0,
+        "18_24_months": 10.0
+      }
+    },
+    {
+      "rangeLabel": "$19.01-$19.25",
+      "minInclusive": 19.01,
+      "maxInclusive": 19.25,
+      "salePriceAud": 20.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 13.1625,
+        "6_12_months": 12.15,
+        "12_18_months": 11.137500000000001,
+        "18_24_months": 10.125
+      }
+    },
+    {
+      "rangeLabel": "$19.26-$19.50",
+      "minInclusive": 19.26,
+      "maxInclusive": 19.5,
+      "salePriceAud": 20.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 13.325000000000001,
+        "6_12_months": 12.299999999999999,
+        "12_18_months": 11.275,
+        "18_24_months": 10.25
+      }
+    },
+    {
+      "rangeLabel": "$19.51-$19.75",
+      "minInclusive": 19.51,
+      "maxInclusive": 19.75,
+      "salePriceAud": 20.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 13.4875,
+        "6_12_months": 12.45,
+        "12_18_months": 11.412500000000001,
+        "18_24_months": 10.375
+      }
+    },
+    {
+      "rangeLabel": "$19.76-$20.00",
+      "minInclusive": 19.76,
+      "maxInclusive": 20.0,
+      "salePriceAud": 21.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 13.65,
+        "6_12_months": 12.6,
+        "12_18_months": 11.55,
+        "18_24_months": 10.5
+      }
+    },
+    {
+      "rangeLabel": "$20.01-$20.25",
+      "minInclusive": 20.01,
+      "maxInclusive": 20.25,
+      "salePriceAud": 21.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 13.8125,
+        "6_12_months": 12.75,
+        "12_18_months": 11.687500000000002,
+        "18_24_months": 10.625
+      }
+    },
+    {
+      "rangeLabel": "$20.26-$20.50",
+      "minInclusive": 20.26,
+      "maxInclusive": 20.5,
+      "salePriceAud": 21.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 13.975,
+        "6_12_months": 12.9,
+        "12_18_months": 11.825000000000001,
+        "18_24_months": 10.75
+      }
+    },
+    {
+      "rangeLabel": "$20.51-$20.75",
+      "minInclusive": 20.51,
+      "maxInclusive": 20.75,
+      "salePriceAud": 21.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 14.137500000000001,
+        "6_12_months": 13.049999999999999,
+        "12_18_months": 11.9625,
+        "18_24_months": 10.875
+      }
+    },
+    {
+      "rangeLabel": "$20.76-$21.00",
+      "minInclusive": 20.76,
+      "maxInclusive": 21.0,
+      "salePriceAud": 22.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 14.3,
+        "6_12_months": 13.2,
+        "12_18_months": 12.100000000000001,
+        "18_24_months": 11.0
+      }
+    },
+    {
+      "rangeLabel": "$21.01-$21.25",
+      "minInclusive": 21.01,
+      "maxInclusive": 21.25,
+      "salePriceAud": 22.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 14.4625,
+        "6_12_months": 13.35,
+        "12_18_months": 12.2375,
+        "18_24_months": 11.125
+      }
+    },
+    {
+      "rangeLabel": "$21.26-$21.50",
+      "minInclusive": 21.26,
+      "maxInclusive": 21.5,
+      "salePriceAud": 22.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 14.625,
+        "6_12_months": 13.5,
+        "12_18_months": 12.375000000000002,
+        "18_24_months": 11.25
+      }
+    },
+    {
+      "rangeLabel": "$21.51-$21.75",
+      "minInclusive": 21.51,
+      "maxInclusive": 21.75,
+      "salePriceAud": 22.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 14.7875,
+        "6_12_months": 13.65,
+        "12_18_months": 12.512500000000001,
+        "18_24_months": 11.375
+      }
+    },
+    {
+      "rangeLabel": "$21.76-$22.00",
+      "minInclusive": 21.76,
+      "maxInclusive": 22.0,
+      "salePriceAud": 23.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 14.950000000000001,
+        "6_12_months": 13.799999999999999,
+        "12_18_months": 12.65,
+        "18_24_months": 11.5
+      }
+    },
+    {
+      "rangeLabel": "$22.01-$22.25",
+      "minInclusive": 22.01,
+      "maxInclusive": 22.25,
+      "salePriceAud": 23.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 15.1125,
+        "6_12_months": 13.95,
+        "12_18_months": 12.787500000000001,
+        "18_24_months": 11.625
+      }
+    },
+    {
+      "rangeLabel": "$22.26-$22.50",
+      "minInclusive": 22.26,
+      "maxInclusive": 22.5,
+      "salePriceAud": 23.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 15.275,
+        "6_12_months": 14.1,
+        "12_18_months": 12.925,
+        "18_24_months": 11.75
+      }
+    },
+    {
+      "rangeLabel": "$22.51-$22.75",
+      "minInclusive": 22.51,
+      "maxInclusive": 22.75,
+      "salePriceAud": 23.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 15.4375,
+        "6_12_months": 14.25,
+        "12_18_months": 13.062500000000002,
+        "18_24_months": 11.875
+      }
+    },
+    {
+      "rangeLabel": "$22.76-$23.00",
+      "minInclusive": 22.76,
+      "maxInclusive": 23.0,
+      "salePriceAud": 24.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 15.600000000000001,
+        "6_12_months": 14.399999999999999,
+        "12_18_months": 13.200000000000001,
+        "18_24_months": 12.0
+      }
+    },
+    {
+      "rangeLabel": "$23.01-$23.25",
+      "minInclusive": 23.01,
+      "maxInclusive": 23.25,
+      "salePriceAud": 24.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 15.762500000000001,
+        "6_12_months": 14.549999999999999,
+        "12_18_months": 13.3375,
+        "18_24_months": 12.125
+      }
+    },
+    {
+      "rangeLabel": "$23.26-$23.50",
+      "minInclusive": 23.26,
+      "maxInclusive": 23.5,
+      "salePriceAud": 24.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 15.925,
+        "6_12_months": 14.7,
+        "12_18_months": 13.475000000000001,
+        "18_24_months": 12.25
+      }
+    },
+    {
+      "rangeLabel": "$23.51-$23.75",
+      "minInclusive": 23.51,
+      "maxInclusive": 23.75,
+      "salePriceAud": 24.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 16.087500000000002,
+        "6_12_months": 14.85,
+        "12_18_months": 13.6125,
+        "18_24_months": 12.375
+      }
+    },
+    {
+      "rangeLabel": "$23.76-$24.00",
+      "minInclusive": 23.76,
+      "maxInclusive": 24.0,
+      "salePriceAud": 25.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 16.25,
+        "6_12_months": 15.0,
+        "12_18_months": 13.750000000000002,
+        "18_24_months": 12.5
+      }
+    },
+    {
+      "rangeLabel": "$24.01-$24.25",
+      "minInclusive": 24.01,
+      "maxInclusive": 24.25,
+      "salePriceAud": 25.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 16.4125,
+        "6_12_months": 15.149999999999999,
+        "12_18_months": 13.887500000000001,
+        "18_24_months": 12.625
+      }
+    },
+    {
+      "rangeLabel": "$24.26-$24.50",
+      "minInclusive": 24.26,
+      "maxInclusive": 24.5,
+      "salePriceAud": 25.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 16.575,
+        "6_12_months": 15.299999999999999,
+        "12_18_months": 14.025,
+        "18_24_months": 12.75
+      }
+    },
+    {
+      "rangeLabel": "$24.51-$24.75",
+      "minInclusive": 24.51,
+      "maxInclusive": 24.75,
+      "salePriceAud": 25.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 16.7375,
+        "6_12_months": 15.45,
+        "12_18_months": 14.162500000000001,
+        "18_24_months": 12.875
+      }
+    },
+    {
+      "rangeLabel": "$24.76-$25.00",
+      "minInclusive": 24.76,
+      "maxInclusive": 25.0,
+      "salePriceAud": 26.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 16.900000000000002,
+        "6_12_months": 15.6,
+        "12_18_months": 14.3,
+        "18_24_months": 13.0
+      }
+    },
+    {
+      "rangeLabel": "$25.01-$25.25",
+      "minInclusive": 25.01,
+      "maxInclusive": 25.25,
+      "salePriceAud": 26.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 17.0625,
+        "6_12_months": 15.75,
+        "12_18_months": 14.437500000000002,
+        "18_24_months": 13.125
+      }
+    },
+    {
+      "rangeLabel": "$25.26-$25.50",
+      "minInclusive": 25.26,
+      "maxInclusive": 25.5,
+      "salePriceAud": 26.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 17.225,
+        "6_12_months": 15.899999999999999,
+        "12_18_months": 14.575000000000001,
+        "18_24_months": 13.25
+      }
+    },
+    {
+      "rangeLabel": "$25.51-$25.75",
+      "minInclusive": 25.51,
+      "maxInclusive": 25.75,
+      "salePriceAud": 26.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 17.3875,
+        "6_12_months": 16.05,
+        "12_18_months": 14.7125,
+        "18_24_months": 13.375
+      }
+    },
+    {
+      "rangeLabel": "$25.76-$26.00",
+      "minInclusive": 25.76,
+      "maxInclusive": 26.0,
+      "salePriceAud": 27.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 17.55,
+        "6_12_months": 16.2,
+        "12_18_months": 14.850000000000001,
+        "18_24_months": 13.5
+      }
+    },
+    {
+      "rangeLabel": "$26.01-$26.25",
+      "minInclusive": 26.01,
+      "maxInclusive": 26.25,
+      "salePriceAud": 27.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 17.712500000000002,
+        "6_12_months": 16.349999999999998,
+        "12_18_months": 14.9875,
+        "18_24_months": 13.625
+      }
+    },
+    {
+      "rangeLabel": "$26.26-$26.50",
+      "minInclusive": 26.26,
+      "maxInclusive": 26.5,
+      "salePriceAud": 27.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 17.875,
+        "6_12_months": 16.5,
+        "12_18_months": 15.125000000000002,
+        "18_24_months": 13.75
+      }
+    },
+    {
+      "rangeLabel": "$26.51-$26.75",
+      "minInclusive": 26.51,
+      "maxInclusive": 26.75,
+      "salePriceAud": 27.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 18.0375,
+        "6_12_months": 16.65,
+        "12_18_months": 15.262500000000001,
+        "18_24_months": 13.875
+      }
+    },
+    {
+      "rangeLabel": "$26.76-$27.00",
+      "minInclusive": 26.76,
+      "maxInclusive": 27.0,
+      "salePriceAud": 28.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 18.2,
+        "6_12_months": 16.8,
+        "12_18_months": 15.400000000000002,
+        "18_24_months": 14.0
+      }
+    },
+    {
+      "rangeLabel": "$27.01-$27.25",
+      "minInclusive": 27.01,
+      "maxInclusive": 27.25,
+      "salePriceAud": 28.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 18.3625,
+        "6_12_months": 16.95,
+        "12_18_months": 15.537500000000001,
+        "18_24_months": 14.125
+      }
+    },
+    {
+      "rangeLabel": "$27.26-$27.50",
+      "minInclusive": 27.26,
+      "maxInclusive": 27.5,
+      "salePriceAud": 28.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 18.525000000000002,
+        "6_12_months": 17.099999999999998,
+        "12_18_months": 15.675,
+        "18_24_months": 14.25
+      }
+    },
+    {
+      "rangeLabel": "$27.51-$27.75",
+      "minInclusive": 27.51,
+      "maxInclusive": 27.75,
+      "salePriceAud": 28.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 18.6875,
+        "6_12_months": 17.25,
+        "12_18_months": 15.812500000000002,
+        "18_24_months": 14.375
+      }
+    },
+    {
+      "rangeLabel": "$27.76-$28.00",
+      "minInclusive": 27.76,
+      "maxInclusive": 28.0,
+      "salePriceAud": 29.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 18.85,
+        "6_12_months": 17.4,
+        "12_18_months": 15.950000000000001,
+        "18_24_months": 14.5
+      }
+    },
+    {
+      "rangeLabel": "$28.01-$28.25",
+      "minInclusive": 28.01,
+      "maxInclusive": 28.25,
+      "salePriceAud": 29.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 19.0125,
+        "6_12_months": 17.55,
+        "12_18_months": 16.087500000000002,
+        "18_24_months": 14.625
+      }
+    },
+    {
+      "rangeLabel": "$28.26-$28.50",
+      "minInclusive": 28.26,
+      "maxInclusive": 28.5,
+      "salePriceAud": 29.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 19.175,
+        "6_12_months": 17.7,
+        "12_18_months": 16.225,
+        "18_24_months": 14.75
+      }
+    },
+    {
+      "rangeLabel": "$28.51-$28.75",
+      "minInclusive": 28.51,
+      "maxInclusive": 28.75,
+      "salePriceAud": 29.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 19.337500000000002,
+        "6_12_months": 17.849999999999998,
+        "12_18_months": 16.3625,
+        "18_24_months": 14.875
+      }
+    },
+    {
+      "rangeLabel": "$28.76-$29.00",
+      "minInclusive": 28.76,
+      "maxInclusive": 29.0,
+      "salePriceAud": 30.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 19.5,
+        "6_12_months": 18.0,
+        "12_18_months": 16.5,
+        "18_24_months": 15.0
+      }
+    },
+    {
+      "rangeLabel": "$29.01-$29.25",
+      "minInclusive": 29.01,
+      "maxInclusive": 29.25,
+      "salePriceAud": 30.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 19.6625,
+        "6_12_months": 18.15,
+        "12_18_months": 16.637500000000003,
+        "18_24_months": 15.125
+      }
+    },
+    {
+      "rangeLabel": "$29.26-$29.50",
+      "minInclusive": 29.26,
+      "maxInclusive": 29.5,
+      "salePriceAud": 30.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 19.825,
+        "6_12_months": 18.3,
+        "12_18_months": 16.775000000000002,
+        "18_24_months": 15.25
+      }
+    },
+    {
+      "rangeLabel": "$29.51-$29.75",
+      "minInclusive": 29.51,
+      "maxInclusive": 29.75,
+      "salePriceAud": 30.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 19.9875,
+        "6_12_months": 18.45,
+        "12_18_months": 16.9125,
+        "18_24_months": 15.375
+      }
+    },
+    {
+      "rangeLabel": "$29.76-$30.00",
+      "minInclusive": 29.76,
+      "maxInclusive": 30.0,
+      "salePriceAud": 31.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 20.150000000000002,
+        "6_12_months": 18.599999999999998,
+        "12_18_months": 17.05,
+        "18_24_months": 15.5
+      }
+    },
+    {
+      "rangeLabel": "$30.01-$30.25",
+      "minInclusive": 30.01,
+      "maxInclusive": 30.25,
+      "salePriceAud": 31.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 20.3125,
+        "6_12_months": 18.75,
+        "12_18_months": 17.1875,
+        "18_24_months": 15.625
+      }
+    },
+    {
+      "rangeLabel": "$30.26-$30.50",
+      "minInclusive": 30.26,
+      "maxInclusive": 30.5,
+      "salePriceAud": 31.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 20.475,
+        "6_12_months": 18.9,
+        "12_18_months": 17.325000000000003,
+        "18_24_months": 15.75
+      }
+    },
+    {
+      "rangeLabel": "$30.51-$30.75",
+      "minInclusive": 30.51,
+      "maxInclusive": 30.75,
+      "salePriceAud": 31.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 20.6375,
+        "6_12_months": 19.05,
+        "12_18_months": 17.462500000000002,
+        "18_24_months": 15.875
+      }
+    },
+    {
+      "rangeLabel": "$30.76-$31.00",
+      "minInclusive": 30.76,
+      "maxInclusive": 31.0,
+      "salePriceAud": 32.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 20.8,
+        "6_12_months": 19.2,
+        "12_18_months": 17.6,
+        "18_24_months": 16.0
+      }
+    },
+    {
+      "rangeLabel": "$31.01-$31.25",
+      "minInclusive": 31.01,
+      "maxInclusive": 31.25,
+      "salePriceAud": 32.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 20.962500000000002,
+        "6_12_months": 19.349999999999998,
+        "12_18_months": 17.7375,
+        "18_24_months": 16.125
+      }
+    },
+    {
+      "rangeLabel": "$31.26-$31.50",
+      "minInclusive": 31.26,
+      "maxInclusive": 31.5,
+      "salePriceAud": 32.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 21.125,
+        "6_12_months": 19.5,
+        "12_18_months": 17.875,
+        "18_24_months": 16.25
+      }
+    },
+    {
+      "rangeLabel": "$31.51-$31.75",
+      "minInclusive": 31.51,
+      "maxInclusive": 31.75,
+      "salePriceAud": 32.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 21.2875,
+        "6_12_months": 19.65,
+        "12_18_months": 18.012500000000003,
+        "18_24_months": 16.375
+      }
+    },
+    {
+      "rangeLabel": "$31.76-$32.00",
+      "minInclusive": 31.76,
+      "maxInclusive": 32.0,
+      "salePriceAud": 33.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 21.45,
+        "6_12_months": 19.8,
+        "12_18_months": 18.150000000000002,
+        "18_24_months": 16.5
+      }
+    },
+    {
+      "rangeLabel": "$32.01-$32.25",
+      "minInclusive": 32.01,
+      "maxInclusive": 32.25,
+      "salePriceAud": 33.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 21.6125,
+        "6_12_months": 19.95,
+        "12_18_months": 18.2875,
+        "18_24_months": 16.625
+      }
+    },
+    {
+      "rangeLabel": "$32.26-$32.50",
+      "minInclusive": 32.26,
+      "maxInclusive": 32.5,
+      "salePriceAud": 33.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 21.775000000000002,
+        "6_12_months": 20.099999999999998,
+        "12_18_months": 18.425,
+        "18_24_months": 16.75
+      }
+    },
+    {
+      "rangeLabel": "$32.51-$32.75",
+      "minInclusive": 32.51,
+      "maxInclusive": 32.75,
+      "salePriceAud": 33.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 21.9375,
+        "6_12_months": 20.25,
+        "12_18_months": 18.5625,
+        "18_24_months": 16.875
+      }
+    },
+    {
+      "rangeLabel": "$32.76-$33.00",
+      "minInclusive": 32.76,
+      "maxInclusive": 33.0,
+      "salePriceAud": 34.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 22.1,
+        "6_12_months": 20.4,
+        "12_18_months": 18.700000000000003,
+        "18_24_months": 17.0
+      }
+    },
+    {
+      "rangeLabel": "$33.01-$33.25",
+      "minInclusive": 33.01,
+      "maxInclusive": 33.25,
+      "salePriceAud": 34.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 22.2625,
+        "6_12_months": 20.55,
+        "12_18_months": 18.837500000000002,
+        "18_24_months": 17.125
+      }
+    },
+    {
+      "rangeLabel": "$33.26-$33.50",
+      "minInclusive": 33.26,
+      "maxInclusive": 33.5,
+      "salePriceAud": 34.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 22.425,
+        "6_12_months": 20.7,
+        "12_18_months": 18.975,
+        "18_24_months": 17.25
+      }
+    },
+    {
+      "rangeLabel": "$33.51-$33.75",
+      "minInclusive": 33.51,
+      "maxInclusive": 33.75,
+      "salePriceAud": 34.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 22.587500000000002,
+        "6_12_months": 20.849999999999998,
+        "12_18_months": 19.1125,
+        "18_24_months": 17.375
+      }
+    },
+    {
+      "rangeLabel": "$33.76-$34.00",
+      "minInclusive": 33.76,
+      "maxInclusive": 34.0,
+      "salePriceAud": 35.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 22.75,
+        "6_12_months": 21.0,
+        "12_18_months": 19.25,
+        "18_24_months": 17.5
+      }
+    },
+    {
+      "rangeLabel": "$34.01-$34.25",
+      "minInclusive": 34.01,
+      "maxInclusive": 34.25,
+      "salePriceAud": 35.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 22.9125,
+        "6_12_months": 21.15,
+        "12_18_months": 19.387500000000003,
+        "18_24_months": 17.625
+      }
+    },
+    {
+      "rangeLabel": "$34.26-$34.50",
+      "minInclusive": 34.26,
+      "maxInclusive": 34.5,
+      "salePriceAud": 35.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 23.075,
+        "6_12_months": 21.3,
+        "12_18_months": 19.525000000000002,
+        "18_24_months": 17.75
+      }
+    },
+    {
+      "rangeLabel": "$34.51-$34.75",
+      "minInclusive": 34.51,
+      "maxInclusive": 34.75,
+      "salePriceAud": 35.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 23.2375,
+        "6_12_months": 21.45,
+        "12_18_months": 19.6625,
+        "18_24_months": 17.875
+      }
+    },
+    {
+      "rangeLabel": "$34.76-$35.00",
+      "minInclusive": 34.76,
+      "maxInclusive": 35.0,
+      "salePriceAud": 36.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 23.400000000000002,
+        "6_12_months": 21.599999999999998,
+        "12_18_months": 19.8,
+        "18_24_months": 18.0
+      }
+    },
+    {
+      "rangeLabel": "$35.01-$35.25",
+      "minInclusive": 35.01,
+      "maxInclusive": 35.25,
+      "salePriceAud": 36.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 23.5625,
+        "6_12_months": 21.75,
+        "12_18_months": 19.9375,
+        "18_24_months": 18.125
+      }
+    },
+    {
+      "rangeLabel": "$35.26-$35.50",
+      "minInclusive": 35.26,
+      "maxInclusive": 35.5,
+      "salePriceAud": 36.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 23.725,
+        "6_12_months": 21.9,
+        "12_18_months": 20.075000000000003,
+        "18_24_months": 18.25
+      }
+    },
+    {
+      "rangeLabel": "$35.51-$35.75",
+      "minInclusive": 35.51,
+      "maxInclusive": 35.75,
+      "salePriceAud": 36.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 23.8875,
+        "6_12_months": 22.05,
+        "12_18_months": 20.212500000000002,
+        "18_24_months": 18.375
+      }
+    },
+    {
+      "rangeLabel": "$35.76-$36.00",
+      "minInclusive": 35.76,
+      "maxInclusive": 36.0,
+      "salePriceAud": 37.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 24.05,
+        "6_12_months": 22.2,
+        "12_18_months": 20.35,
+        "18_24_months": 18.5
+      }
+    },
+    {
+      "rangeLabel": "$36.01-$36.25",
+      "minInclusive": 36.01,
+      "maxInclusive": 36.25,
+      "salePriceAud": 37.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 24.212500000000002,
+        "6_12_months": 22.349999999999998,
+        "12_18_months": 20.4875,
+        "18_24_months": 18.625
+      }
+    },
+    {
+      "rangeLabel": "$36.26-$36.50",
+      "minInclusive": 36.26,
+      "maxInclusive": 36.5,
+      "salePriceAud": 37.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 24.375,
+        "6_12_months": 22.5,
+        "12_18_months": 20.625,
+        "18_24_months": 18.75
+      }
+    },
+    {
+      "rangeLabel": "$36.51-$36.75",
+      "minInclusive": 36.51,
+      "maxInclusive": 36.75,
+      "salePriceAud": 37.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 24.5375,
+        "6_12_months": 22.65,
+        "12_18_months": 20.762500000000003,
+        "18_24_months": 18.875
+      }
+    },
+    {
+      "rangeLabel": "$36.76-$37.00",
+      "minInclusive": 36.76,
+      "maxInclusive": 37.0,
+      "salePriceAud": 38.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 24.7,
+        "6_12_months": 22.8,
+        "12_18_months": 20.900000000000002,
+        "18_24_months": 19.0
+      }
+    },
+    {
+      "rangeLabel": "$37.01-$37.25",
+      "minInclusive": 37.01,
+      "maxInclusive": 37.25,
+      "salePriceAud": 38.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 24.8625,
+        "6_12_months": 22.95,
+        "12_18_months": 21.0375,
+        "18_24_months": 19.125
+      }
+    },
+    {
+      "rangeLabel": "$37.26-$37.50",
+      "minInclusive": 37.26,
+      "maxInclusive": 37.5,
+      "salePriceAud": 38.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 25.025000000000002,
+        "6_12_months": 23.099999999999998,
+        "12_18_months": 21.175,
+        "18_24_months": 19.25
+      }
+    },
+    {
+      "rangeLabel": "$37.51-$37.75",
+      "minInclusive": 37.51,
+      "maxInclusive": 37.75,
+      "salePriceAud": 38.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 25.1875,
+        "6_12_months": 23.25,
+        "12_18_months": 21.3125,
+        "18_24_months": 19.375
+      }
+    },
+    {
+      "rangeLabel": "$37.76-$38.00",
+      "minInclusive": 37.76,
+      "maxInclusive": 38.0,
+      "salePriceAud": 39.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 25.35,
+        "6_12_months": 23.4,
+        "12_18_months": 21.450000000000003,
+        "18_24_months": 19.5
+      }
+    },
+    {
+      "rangeLabel": "$38.01-$38.25",
+      "minInclusive": 38.01,
+      "maxInclusive": 38.25,
+      "salePriceAud": 39.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 25.5125,
+        "6_12_months": 23.55,
+        "12_18_months": 21.587500000000002,
+        "18_24_months": 19.625
+      }
+    },
+    {
+      "rangeLabel": "$38.26-$38.50",
+      "minInclusive": 38.26,
+      "maxInclusive": 38.5,
+      "salePriceAud": 39.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 25.675,
+        "6_12_months": 23.7,
+        "12_18_months": 21.725,
+        "18_24_months": 19.75
+      }
+    },
+    {
+      "rangeLabel": "$38.51-$38.75",
+      "minInclusive": 38.51,
+      "maxInclusive": 38.75,
+      "salePriceAud": 39.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 25.837500000000002,
+        "6_12_months": 23.849999999999998,
+        "12_18_months": 21.8625,
+        "18_24_months": 19.875
+      }
+    },
+    {
+      "rangeLabel": "$38.76-$39.00",
+      "minInclusive": 38.76,
+      "maxInclusive": 39.0,
+      "salePriceAud": 40.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 26.0,
+        "6_12_months": 24.0,
+        "12_18_months": 22.0,
+        "18_24_months": 20.0
+      }
+    },
+    {
+      "rangeLabel": "$39.01-$39.25",
+      "minInclusive": 39.01,
+      "maxInclusive": 39.25,
+      "salePriceAud": 40.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 26.1625,
+        "6_12_months": 24.15,
+        "12_18_months": 22.137500000000003,
+        "18_24_months": 20.125
+      }
+    },
+    {
+      "rangeLabel": "$39.26-$39.50",
+      "minInclusive": 39.26,
+      "maxInclusive": 39.5,
+      "salePriceAud": 40.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 26.325,
+        "6_12_months": 24.3,
+        "12_18_months": 22.275000000000002,
+        "18_24_months": 20.25
+      }
+    },
+    {
+      "rangeLabel": "$39.51-$39.75",
+      "minInclusive": 39.51,
+      "maxInclusive": 39.75,
+      "salePriceAud": 40.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 26.4875,
+        "6_12_months": 24.45,
+        "12_18_months": 22.4125,
+        "18_24_months": 20.375
+      }
+    },
+    {
+      "rangeLabel": "$39.76-$40.00",
+      "minInclusive": 39.76,
+      "maxInclusive": 40.0,
+      "salePriceAud": 41.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 26.650000000000002,
+        "6_12_months": 24.599999999999998,
+        "12_18_months": 22.55,
+        "18_24_months": 20.5
+      }
+    },
+    {
+      "rangeLabel": "$40.01-$40.25",
+      "minInclusive": 40.01,
+      "maxInclusive": 40.25,
+      "salePriceAud": 41.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 26.8125,
+        "6_12_months": 24.75,
+        "12_18_months": 22.687500000000004,
+        "18_24_months": 20.625
+      }
+    },
+    {
+      "rangeLabel": "$40.26-$40.50",
+      "minInclusive": 40.26,
+      "maxInclusive": 40.5,
+      "salePriceAud": 41.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 26.975,
+        "6_12_months": 24.9,
+        "12_18_months": 22.825000000000003,
+        "18_24_months": 20.75
+      }
+    },
+    {
+      "rangeLabel": "$40.51-$40.75",
+      "minInclusive": 40.51,
+      "maxInclusive": 40.75,
+      "salePriceAud": 41.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 27.1375,
+        "6_12_months": 25.05,
+        "12_18_months": 22.962500000000002,
+        "18_24_months": 20.875
+      }
+    },
+    {
+      "rangeLabel": "$40.76-$41.00",
+      "minInclusive": 40.76,
+      "maxInclusive": 41.0,
+      "salePriceAud": 42.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 27.3,
+        "6_12_months": 25.2,
+        "12_18_months": 23.1,
+        "18_24_months": 21.0
+      }
+    },
+    {
+      "rangeLabel": "$41.01-$41.25",
+      "minInclusive": 41.01,
+      "maxInclusive": 41.25,
+      "salePriceAud": 42.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 27.462500000000002,
+        "6_12_months": 25.349999999999998,
+        "12_18_months": 23.2375,
+        "18_24_months": 21.125
+      }
+    },
+    {
+      "rangeLabel": "$41.26-$41.50",
+      "minInclusive": 41.26,
+      "maxInclusive": 41.5,
+      "salePriceAud": 42.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 27.625,
+        "6_12_months": 25.5,
+        "12_18_months": 23.375000000000004,
+        "18_24_months": 21.25
+      }
+    },
+    {
+      "rangeLabel": "$41.51-$41.75",
+      "minInclusive": 41.51,
+      "maxInclusive": 41.75,
+      "salePriceAud": 42.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 27.7875,
+        "6_12_months": 25.65,
+        "12_18_months": 23.512500000000003,
+        "18_24_months": 21.375
+      }
+    },
+    {
+      "rangeLabel": "$41.76-$42.00",
+      "minInclusive": 41.76,
+      "maxInclusive": 42.0,
+      "salePriceAud": 43.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 27.95,
+        "6_12_months": 25.8,
+        "12_18_months": 23.650000000000002,
+        "18_24_months": 21.5
+      }
+    },
+    {
+      "rangeLabel": "$42.01-$42.25",
+      "minInclusive": 42.01,
+      "maxInclusive": 42.25,
+      "salePriceAud": 43.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 28.1125,
+        "6_12_months": 25.95,
+        "12_18_months": 23.7875,
+        "18_24_months": 21.625
+      }
+    },
+    {
+      "rangeLabel": "$42.26-$42.50",
+      "minInclusive": 42.26,
+      "maxInclusive": 42.5,
+      "salePriceAud": 43.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 28.275000000000002,
+        "6_12_months": 26.099999999999998,
+        "12_18_months": 23.925,
+        "18_24_months": 21.75
+      }
+    },
+    {
+      "rangeLabel": "$42.51-$42.75",
+      "minInclusive": 42.51,
+      "maxInclusive": 42.75,
+      "salePriceAud": 43.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 28.4375,
+        "6_12_months": 26.25,
+        "12_18_months": 24.062500000000004,
+        "18_24_months": 21.875
+      }
+    },
+    {
+      "rangeLabel": "$42.76-$43.00",
+      "minInclusive": 42.76,
+      "maxInclusive": 43.0,
+      "salePriceAud": 44.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 28.6,
+        "6_12_months": 26.4,
+        "12_18_months": 24.200000000000003,
+        "18_24_months": 22.0
+      }
+    },
+    {
+      "rangeLabel": "$43.01-$43.25",
+      "minInclusive": 43.01,
+      "maxInclusive": 43.25,
+      "salePriceAud": 44.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 28.7625,
+        "6_12_months": 26.55,
+        "12_18_months": 24.337500000000002,
+        "18_24_months": 22.125
+      }
+    },
+    {
+      "rangeLabel": "$43.26-$43.50",
+      "minInclusive": 43.26,
+      "maxInclusive": 43.5,
+      "salePriceAud": 44.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 28.925,
+        "6_12_months": 26.7,
+        "12_18_months": 24.475,
+        "18_24_months": 22.25
+      }
+    },
+    {
+      "rangeLabel": "$43.51-$43.75",
+      "minInclusive": 43.51,
+      "maxInclusive": 43.75,
+      "salePriceAud": 44.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 29.087500000000002,
+        "6_12_months": 26.849999999999998,
+        "12_18_months": 24.6125,
+        "18_24_months": 22.375
+      }
+    },
+    {
+      "rangeLabel": "$43.76-$44.00",
+      "minInclusive": 43.76,
+      "maxInclusive": 44.0,
+      "salePriceAud": 45.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 29.25,
+        "6_12_months": 27.0,
+        "12_18_months": 24.750000000000004,
+        "18_24_months": 22.5
+      }
+    },
+    {
+      "rangeLabel": "$44.01-$44.25",
+      "minInclusive": 44.01,
+      "maxInclusive": 44.25,
+      "salePriceAud": 45.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 29.4125,
+        "6_12_months": 27.15,
+        "12_18_months": 24.887500000000003,
+        "18_24_months": 22.625
+      }
+    },
+    {
+      "rangeLabel": "$44.26-$44.50",
+      "minInclusive": 44.26,
+      "maxInclusive": 44.5,
+      "salePriceAud": 45.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 29.575,
+        "6_12_months": 27.3,
+        "12_18_months": 25.025000000000002,
+        "18_24_months": 22.75
+      }
+    },
+    {
+      "rangeLabel": "$44.51-$44.75",
+      "minInclusive": 44.51,
+      "maxInclusive": 44.75,
+      "salePriceAud": 45.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 29.7375,
+        "6_12_months": 27.45,
+        "12_18_months": 25.1625,
+        "18_24_months": 22.875
+      }
+    },
+    {
+      "rangeLabel": "$44.76-$45.00",
+      "minInclusive": 44.76,
+      "maxInclusive": 45.0,
+      "salePriceAud": 46.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 29.900000000000002,
+        "6_12_months": 27.599999999999998,
+        "12_18_months": 25.3,
+        "18_24_months": 23.0
+      }
+    },
+    {
+      "rangeLabel": "$45.01-$45.25",
+      "minInclusive": 45.01,
+      "maxInclusive": 45.25,
+      "salePriceAud": 46.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 30.0625,
+        "6_12_months": 27.75,
+        "12_18_months": 25.437500000000004,
+        "18_24_months": 23.125
+      }
+    },
+    {
+      "rangeLabel": "$45.26-$45.50",
+      "minInclusive": 45.26,
+      "maxInclusive": 45.5,
+      "salePriceAud": 46.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 30.225,
+        "6_12_months": 27.9,
+        "12_18_months": 25.575000000000003,
+        "18_24_months": 23.25
+      }
+    },
+    {
+      "rangeLabel": "$45.51-$45.75",
+      "minInclusive": 45.51,
+      "maxInclusive": 45.75,
+      "salePriceAud": 46.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 30.3875,
+        "6_12_months": 28.05,
+        "12_18_months": 25.712500000000002,
+        "18_24_months": 23.375
+      }
+    },
+    {
+      "rangeLabel": "$45.76-$46.00",
+      "minInclusive": 45.76,
+      "maxInclusive": 46.0,
+      "salePriceAud": 47.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 30.55,
+        "6_12_months": 28.2,
+        "12_18_months": 25.85,
+        "18_24_months": 23.5
+      }
+    },
+    {
+      "rangeLabel": "$46.01-$46.25",
+      "minInclusive": 46.01,
+      "maxInclusive": 46.25,
+      "salePriceAud": 47.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 30.712500000000002,
+        "6_12_months": 28.349999999999998,
+        "12_18_months": 25.9875,
+        "18_24_months": 23.625
+      }
+    },
+    {
+      "rangeLabel": "$46.26-$46.50",
+      "minInclusive": 46.26,
+      "maxInclusive": 46.5,
+      "salePriceAud": 47.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 30.875,
+        "6_12_months": 28.5,
+        "12_18_months": 26.125000000000004,
+        "18_24_months": 23.75
+      }
+    },
+    {
+      "rangeLabel": "$46.51-$46.75",
+      "minInclusive": 46.51,
+      "maxInclusive": 46.75,
+      "salePriceAud": 47.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 31.0375,
+        "6_12_months": 28.65,
+        "12_18_months": 26.262500000000003,
+        "18_24_months": 23.875
+      }
+    },
+    {
+      "rangeLabel": "$46.76-$47.00",
+      "minInclusive": 46.76,
+      "maxInclusive": 47.0,
+      "salePriceAud": 48.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 31.200000000000003,
+        "6_12_months": 28.799999999999997,
+        "12_18_months": 26.400000000000002,
+        "18_24_months": 24.0
+      }
+    },
+    {
+      "rangeLabel": "$47.01-$47.25",
+      "minInclusive": 47.01,
+      "maxInclusive": 47.25,
+      "salePriceAud": 48.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 31.3625,
+        "6_12_months": 28.95,
+        "12_18_months": 26.5375,
+        "18_24_months": 24.125
+      }
+    },
+    {
+      "rangeLabel": "$47.26-$47.50",
+      "minInclusive": 47.26,
+      "maxInclusive": 47.5,
+      "salePriceAud": 48.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 31.525000000000002,
+        "6_12_months": 29.099999999999998,
+        "12_18_months": 26.675,
+        "18_24_months": 24.25
+      }
+    },
+    {
+      "rangeLabel": "$47.51-$47.75",
+      "minInclusive": 47.51,
+      "maxInclusive": 47.75,
+      "salePriceAud": 48.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 31.6875,
+        "6_12_months": 29.25,
+        "12_18_months": 26.812500000000004,
+        "18_24_months": 24.375
+      }
+    },
+    {
+      "rangeLabel": "$47.76-$48.00",
+      "minInclusive": 47.76,
+      "maxInclusive": 48.0,
+      "salePriceAud": 49.0,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 31.85,
+        "6_12_months": 29.4,
+        "12_18_months": 26.950000000000003,
+        "18_24_months": 24.5
+      }
+    },
+    {
+      "rangeLabel": "$48.01-$48.25",
+      "minInclusive": 48.01,
+      "maxInclusive": 48.25,
+      "salePriceAud": 49.25,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 32.0125,
+        "6_12_months": 29.549999999999997,
+        "12_18_months": 27.087500000000002,
+        "18_24_months": 24.625
+      }
+    },
+    {
+      "rangeLabel": "$48.26-$48.50",
+      "minInclusive": 48.26,
+      "maxInclusive": 48.5,
+      "salePriceAud": 49.5,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 32.175000000000004,
+        "6_12_months": 29.7,
+        "12_18_months": 27.225,
+        "18_24_months": 24.75
+      }
+    },
+    {
+      "rangeLabel": "$48.51-$48.75",
+      "minInclusive": 48.51,
+      "maxInclusive": 48.75,
+      "salePriceAud": 49.75,
+      "payoutShare": {
+        "0_6_months": 0.65,
+        "6_12_months": 0.6,
+        "12_18_months": 0.55,
+        "18_24_months": 0.5
+      },
+      "payoutAud": {
+        "0_6_months": 32.3375,
+        "6_12_months": 29.849999999999998,
+        "12_18_months": 27.3625,
+        "18_24_months": 24.875
+      }
+    },
+    {
+      "rangeLabel": "$48.76-$49.00",
+      "minInclusive": 48.76,
+      "maxInclusive": 49.0,
+      "salePriceAud": 50.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 35.0,
+        "6_12_months": 32.5,
+        "12_18_months": 30.0,
+        "18_24_months": 27.500000000000004
+      }
+    },
+    {
+      "rangeLabel": "$49.01-$49.25",
+      "minInclusive": 49.01,
+      "maxInclusive": 49.25,
+      "salePriceAud": 50.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 35.175,
+        "6_12_months": 32.6625,
+        "12_18_months": 30.15,
+        "18_24_months": 27.637500000000003
+      }
+    },
+    {
+      "rangeLabel": "$49.26-$49.50",
+      "minInclusive": 49.26,
+      "maxInclusive": 49.5,
+      "salePriceAud": 50.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 35.349999999999994,
+        "6_12_months": 32.825,
+        "12_18_months": 30.299999999999997,
+        "18_24_months": 27.775000000000002
+      }
+    },
+    {
+      "rangeLabel": "$49.51-$49.75",
+      "minInclusive": 49.51,
+      "maxInclusive": 49.75,
+      "salePriceAud": 50.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 35.525,
+        "6_12_months": 32.987500000000004,
+        "12_18_months": 30.45,
+        "18_24_months": 27.9125
+      }
+    },
+    {
+      "rangeLabel": "$49.76-$50.00",
+      "minInclusive": 49.76,
+      "maxInclusive": 50.0,
+      "salePriceAud": 51.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 35.699999999999996,
+        "6_12_months": 33.15,
+        "12_18_months": 30.599999999999998,
+        "18_24_months": 28.05
+      }
+    },
+    {
+      "rangeLabel": "$50.01-$50.25",
+      "minInclusive": 50.01,
+      "maxInclusive": 50.25,
+      "salePriceAud": 51.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 35.875,
+        "6_12_months": 33.3125,
+        "12_18_months": 30.75,
+        "18_24_months": 28.187500000000004
+      }
+    },
+    {
+      "rangeLabel": "$50.26-$50.50",
+      "minInclusive": 50.26,
+      "maxInclusive": 50.5,
+      "salePriceAud": 51.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 36.05,
+        "6_12_months": 33.475,
+        "12_18_months": 30.9,
+        "18_24_months": 28.325000000000003
+      }
+    },
+    {
+      "rangeLabel": "$50.51-$50.75",
+      "minInclusive": 50.51,
+      "maxInclusive": 50.75,
+      "salePriceAud": 51.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 36.224999999999994,
+        "6_12_months": 33.6375,
+        "12_18_months": 31.049999999999997,
+        "18_24_months": 28.462500000000002
+      }
+    },
+    {
+      "rangeLabel": "$50.76-$51.00",
+      "minInclusive": 50.76,
+      "maxInclusive": 51.0,
+      "salePriceAud": 52.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 36.4,
+        "6_12_months": 33.800000000000004,
+        "12_18_months": 31.2,
+        "18_24_months": 28.6
+      }
+    },
+    {
+      "rangeLabel": "$51.01-$51.25",
+      "minInclusive": 51.01,
+      "maxInclusive": 51.25,
+      "salePriceAud": 52.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 36.574999999999996,
+        "6_12_months": 33.9625,
+        "12_18_months": 31.349999999999998,
+        "18_24_months": 28.7375
+      }
+    },
+    {
+      "rangeLabel": "$51.26-$51.50",
+      "minInclusive": 51.26,
+      "maxInclusive": 51.5,
+      "salePriceAud": 52.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 36.75,
+        "6_12_months": 34.125,
+        "12_18_months": 31.5,
+        "18_24_months": 28.875000000000004
+      }
+    },
+    {
+      "rangeLabel": "$51.51-$51.75",
+      "minInclusive": 51.51,
+      "maxInclusive": 51.75,
+      "salePriceAud": 52.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 36.925,
+        "6_12_months": 34.2875,
+        "12_18_months": 31.65,
+        "18_24_months": 29.012500000000003
+      }
+    },
+    {
+      "rangeLabel": "$51.76-$52.00",
+      "minInclusive": 51.76,
+      "maxInclusive": 52.0,
+      "salePriceAud": 53.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 37.099999999999994,
+        "6_12_months": 34.45,
+        "12_18_months": 31.799999999999997,
+        "18_24_months": 29.150000000000002
+      }
+    },
+    {
+      "rangeLabel": "$52.01-$52.25",
+      "minInclusive": 52.01,
+      "maxInclusive": 52.25,
+      "salePriceAud": 53.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 37.275,
+        "6_12_months": 34.612500000000004,
+        "12_18_months": 31.95,
+        "18_24_months": 29.2875
+      }
+    },
+    {
+      "rangeLabel": "$52.26-$52.50",
+      "minInclusive": 52.26,
+      "maxInclusive": 52.5,
+      "salePriceAud": 53.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 37.449999999999996,
+        "6_12_months": 34.775,
+        "12_18_months": 32.1,
+        "18_24_months": 29.425
+      }
+    },
+    {
+      "rangeLabel": "$52.51-$52.75",
+      "minInclusive": 52.51,
+      "maxInclusive": 52.75,
+      "salePriceAud": 53.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 37.625,
+        "6_12_months": 34.9375,
+        "12_18_months": 32.25,
+        "18_24_months": 29.562500000000004
+      }
+    },
+    {
+      "rangeLabel": "$52.76-$53.00",
+      "minInclusive": 52.76,
+      "maxInclusive": 53.0,
+      "salePriceAud": 54.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 37.8,
+        "6_12_months": 35.1,
+        "12_18_months": 32.4,
+        "18_24_months": 29.700000000000003
+      }
+    },
+    {
+      "rangeLabel": "$53.01-$53.25",
+      "minInclusive": 53.01,
+      "maxInclusive": 53.25,
+      "salePriceAud": 54.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 37.974999999999994,
+        "6_12_months": 35.2625,
+        "12_18_months": 32.55,
+        "18_24_months": 29.837500000000002
+      }
+    },
+    {
+      "rangeLabel": "$53.26-$53.50",
+      "minInclusive": 53.26,
+      "maxInclusive": 53.5,
+      "salePriceAud": 54.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 38.15,
+        "6_12_months": 35.425000000000004,
+        "12_18_months": 32.699999999999996,
+        "18_24_months": 29.975
+      }
+    },
+    {
+      "rangeLabel": "$53.51-$53.75",
+      "minInclusive": 53.51,
+      "maxInclusive": 53.75,
+      "salePriceAud": 54.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 38.324999999999996,
+        "6_12_months": 35.5875,
+        "12_18_months": 32.85,
+        "18_24_months": 30.1125
+      }
+    },
+    {
+      "rangeLabel": "$53.76-$54.00",
+      "minInclusive": 53.76,
+      "maxInclusive": 54.0,
+      "salePriceAud": 55.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 38.5,
+        "6_12_months": 35.75,
+        "12_18_months": 33.0,
+        "18_24_months": 30.250000000000004
+      }
+    },
+    {
+      "rangeLabel": "$54.01-$54.25",
+      "minInclusive": 54.01,
+      "maxInclusive": 54.25,
+      "salePriceAud": 55.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 38.675,
+        "6_12_months": 35.9125,
+        "12_18_months": 33.15,
+        "18_24_months": 30.387500000000003
+      }
+    },
+    {
+      "rangeLabel": "$54.26-$54.50",
+      "minInclusive": 54.26,
+      "maxInclusive": 54.5,
+      "salePriceAud": 55.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 38.849999999999994,
+        "6_12_months": 36.075,
+        "12_18_months": 33.3,
+        "18_24_months": 30.525000000000002
+      }
+    },
+    {
+      "rangeLabel": "$54.51-$54.75",
+      "minInclusive": 54.51,
+      "maxInclusive": 54.75,
+      "salePriceAud": 55.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 39.025,
+        "6_12_months": 36.237500000000004,
+        "12_18_months": 33.449999999999996,
+        "18_24_months": 30.6625
+      }
+    },
+    {
+      "rangeLabel": "$54.76-$55.00",
+      "minInclusive": 54.76,
+      "maxInclusive": 55.0,
+      "salePriceAud": 56.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 39.199999999999996,
+        "6_12_months": 36.4,
+        "12_18_months": 33.6,
+        "18_24_months": 30.800000000000004
+      }
+    },
+    {
+      "rangeLabel": "$55.01-$55.25",
+      "minInclusive": 55.01,
+      "maxInclusive": 55.25,
+      "salePriceAud": 56.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 39.375,
+        "6_12_months": 36.5625,
+        "12_18_months": 33.75,
+        "18_24_months": 30.937500000000004
+      }
+    },
+    {
+      "rangeLabel": "$55.26-$55.50",
+      "minInclusive": 55.26,
+      "maxInclusive": 55.5,
+      "salePriceAud": 56.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 39.55,
+        "6_12_months": 36.725,
+        "12_18_months": 33.9,
+        "18_24_months": 31.075000000000003
+      }
+    },
+    {
+      "rangeLabel": "$55.51-$55.75",
+      "minInclusive": 55.51,
+      "maxInclusive": 55.75,
+      "salePriceAud": 56.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 39.724999999999994,
+        "6_12_months": 36.8875,
+        "12_18_months": 34.05,
+        "18_24_months": 31.212500000000002
+      }
+    },
+    {
+      "rangeLabel": "$55.76-$56.00",
+      "minInclusive": 55.76,
+      "maxInclusive": 56.0,
+      "salePriceAud": 57.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 39.9,
+        "6_12_months": 37.050000000000004,
+        "12_18_months": 34.199999999999996,
+        "18_24_months": 31.35
+      }
+    },
+    {
+      "rangeLabel": "$56.01-$56.25",
+      "minInclusive": 56.01,
+      "maxInclusive": 56.25,
+      "salePriceAud": 57.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 40.074999999999996,
+        "6_12_months": 37.2125,
+        "12_18_months": 34.35,
+        "18_24_months": 31.487500000000004
+      }
+    },
+    {
+      "rangeLabel": "$56.26-$56.50",
+      "minInclusive": 56.26,
+      "maxInclusive": 56.5,
+      "salePriceAud": 57.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 40.25,
+        "6_12_months": 37.375,
+        "12_18_months": 34.5,
+        "18_24_months": 31.625000000000004
+      }
+    },
+    {
+      "rangeLabel": "$56.51-$56.75",
+      "minInclusive": 56.51,
+      "maxInclusive": 56.75,
+      "salePriceAud": 57.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 40.425,
+        "6_12_months": 37.5375,
+        "12_18_months": 34.65,
+        "18_24_months": 31.762500000000003
+      }
+    },
+    {
+      "rangeLabel": "$56.76-$57.00",
+      "minInclusive": 56.76,
+      "maxInclusive": 57.0,
+      "salePriceAud": 58.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 40.599999999999994,
+        "6_12_months": 37.7,
+        "12_18_months": 34.8,
+        "18_24_months": 31.900000000000002
+      }
+    },
+    {
+      "rangeLabel": "$57.01-$57.25",
+      "minInclusive": 57.01,
+      "maxInclusive": 57.25,
+      "salePriceAud": 58.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 40.775,
+        "6_12_months": 37.862500000000004,
+        "12_18_months": 34.949999999999996,
+        "18_24_months": 32.0375
+      }
+    },
+    {
+      "rangeLabel": "$57.26-$57.50",
+      "minInclusive": 57.26,
+      "maxInclusive": 57.5,
+      "salePriceAud": 58.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 40.949999999999996,
+        "6_12_months": 38.025,
+        "12_18_months": 35.1,
+        "18_24_months": 32.175000000000004
+      }
+    },
+    {
+      "rangeLabel": "$57.51-$57.75",
+      "minInclusive": 57.51,
+      "maxInclusive": 57.75,
+      "salePriceAud": 58.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 41.125,
+        "6_12_months": 38.1875,
+        "12_18_months": 35.25,
+        "18_24_months": 32.3125
+      }
+    },
+    {
+      "rangeLabel": "$57.76-$58.00",
+      "minInclusive": 57.76,
+      "maxInclusive": 58.0,
+      "salePriceAud": 59.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 41.3,
+        "6_12_months": 38.35,
+        "12_18_months": 35.4,
+        "18_24_months": 32.45
+      }
+    },
+    {
+      "rangeLabel": "$58.01-$58.25",
+      "minInclusive": 58.01,
+      "maxInclusive": 58.25,
+      "salePriceAud": 59.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 41.474999999999994,
+        "6_12_months": 38.5125,
+        "12_18_months": 35.55,
+        "18_24_months": 32.587500000000006
+      }
+    },
+    {
+      "rangeLabel": "$58.26-$58.50",
+      "minInclusive": 58.26,
+      "maxInclusive": 58.5,
+      "salePriceAud": 59.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 41.65,
+        "6_12_months": 38.675000000000004,
+        "12_18_months": 35.699999999999996,
+        "18_24_months": 32.725
+      }
+    },
+    {
+      "rangeLabel": "$58.51-$58.75",
+      "minInclusive": 58.51,
+      "maxInclusive": 58.75,
+      "salePriceAud": 59.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 41.824999999999996,
+        "6_12_months": 38.8375,
+        "12_18_months": 35.85,
+        "18_24_months": 32.862500000000004
+      }
+    },
+    {
+      "rangeLabel": "$58.76-$59.00",
+      "minInclusive": 58.76,
+      "maxInclusive": 59.0,
+      "salePriceAud": 60.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 42.0,
+        "6_12_months": 39.0,
+        "12_18_months": 36.0,
+        "18_24_months": 33.0
+      }
+    },
+    {
+      "rangeLabel": "$59.01-$59.25",
+      "minInclusive": 59.01,
+      "maxInclusive": 59.25,
+      "salePriceAud": 60.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 42.175,
+        "6_12_months": 39.1625,
+        "12_18_months": 36.15,
+        "18_24_months": 33.1375
+      }
+    },
+    {
+      "rangeLabel": "$59.26-$59.50",
+      "minInclusive": 59.26,
+      "maxInclusive": 59.5,
+      "salePriceAud": 60.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 42.349999999999994,
+        "6_12_months": 39.325,
+        "12_18_months": 36.3,
+        "18_24_months": 33.275000000000006
+      }
+    },
+    {
+      "rangeLabel": "$59.51-$59.75",
+      "minInclusive": 59.51,
+      "maxInclusive": 59.75,
+      "salePriceAud": 60.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 42.525,
+        "6_12_months": 39.487500000000004,
+        "12_18_months": 36.449999999999996,
+        "18_24_months": 33.4125
+      }
+    },
+    {
+      "rangeLabel": "$59.76-$60.00",
+      "minInclusive": 59.76,
+      "maxInclusive": 60.0,
+      "salePriceAud": 61.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 42.699999999999996,
+        "6_12_months": 39.65,
+        "12_18_months": 36.6,
+        "18_24_months": 33.550000000000004
+      }
+    },
+    {
+      "rangeLabel": "$60.01-$60.25",
+      "minInclusive": 60.01,
+      "maxInclusive": 60.25,
+      "salePriceAud": 61.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 42.875,
+        "6_12_months": 39.8125,
+        "12_18_months": 36.75,
+        "18_24_months": 33.6875
+      }
+    },
+    {
+      "rangeLabel": "$60.26-$60.50",
+      "minInclusive": 60.26,
+      "maxInclusive": 60.5,
+      "salePriceAud": 61.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 43.05,
+        "6_12_months": 39.975,
+        "12_18_months": 36.9,
+        "18_24_months": 33.825
+      }
+    },
+    {
+      "rangeLabel": "$60.51-$60.75",
+      "minInclusive": 60.51,
+      "maxInclusive": 60.75,
+      "salePriceAud": 61.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 43.224999999999994,
+        "6_12_months": 40.1375,
+        "12_18_months": 37.05,
+        "18_24_months": 33.962500000000006
+      }
+    },
+    {
+      "rangeLabel": "$60.76-$61.00",
+      "minInclusive": 60.76,
+      "maxInclusive": 61.0,
+      "salePriceAud": 62.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 43.4,
+        "6_12_months": 40.300000000000004,
+        "12_18_months": 37.199999999999996,
+        "18_24_months": 34.1
+      }
+    },
+    {
+      "rangeLabel": "$61.01-$61.25",
+      "minInclusive": 61.01,
+      "maxInclusive": 61.25,
+      "salePriceAud": 62.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 43.574999999999996,
+        "6_12_months": 40.4625,
+        "12_18_months": 37.35,
+        "18_24_months": 34.237500000000004
+      }
+    },
+    {
+      "rangeLabel": "$61.26-$61.50",
+      "minInclusive": 61.26,
+      "maxInclusive": 61.5,
+      "salePriceAud": 62.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 43.75,
+        "6_12_months": 40.625,
+        "12_18_months": 37.5,
+        "18_24_months": 34.375
+      }
+    },
+    {
+      "rangeLabel": "$61.51-$61.75",
+      "minInclusive": 61.51,
+      "maxInclusive": 61.75,
+      "salePriceAud": 62.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 43.925,
+        "6_12_months": 40.7875,
+        "12_18_months": 37.65,
+        "18_24_months": 34.5125
+      }
+    },
+    {
+      "rangeLabel": "$61.76-$62.00",
+      "minInclusive": 61.76,
+      "maxInclusive": 62.0,
+      "salePriceAud": 63.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 44.099999999999994,
+        "6_12_months": 40.95,
+        "12_18_months": 37.8,
+        "18_24_months": 34.650000000000006
+      }
+    },
+    {
+      "rangeLabel": "$62.01-$62.25",
+      "minInclusive": 62.01,
+      "maxInclusive": 62.25,
+      "salePriceAud": 63.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 44.275,
+        "6_12_months": 41.112500000000004,
+        "12_18_months": 37.949999999999996,
+        "18_24_months": 34.7875
+      }
+    },
+    {
+      "rangeLabel": "$62.26-$62.50",
+      "minInclusive": 62.26,
+      "maxInclusive": 62.5,
+      "salePriceAud": 63.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 44.449999999999996,
+        "6_12_months": 41.275,
+        "12_18_months": 38.1,
+        "18_24_months": 34.925000000000004
+      }
+    },
+    {
+      "rangeLabel": "$62.51-$62.75",
+      "minInclusive": 62.51,
+      "maxInclusive": 62.75,
+      "salePriceAud": 63.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 44.625,
+        "6_12_months": 41.4375,
+        "12_18_months": 38.25,
+        "18_24_months": 35.0625
+      }
+    },
+    {
+      "rangeLabel": "$62.76-$63.00",
+      "minInclusive": 62.76,
+      "maxInclusive": 63.0,
+      "salePriceAud": 64.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 44.8,
+        "6_12_months": 41.6,
+        "12_18_months": 38.4,
+        "18_24_months": 35.2
+      }
+    },
+    {
+      "rangeLabel": "$63.01-$63.25",
+      "minInclusive": 63.01,
+      "maxInclusive": 63.25,
+      "salePriceAud": 64.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 44.974999999999994,
+        "6_12_months": 41.7625,
+        "12_18_months": 38.55,
+        "18_24_months": 35.337500000000006
+      }
+    },
+    {
+      "rangeLabel": "$63.26-$63.50",
+      "minInclusive": 63.26,
+      "maxInclusive": 63.5,
+      "salePriceAud": 64.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 45.15,
+        "6_12_months": 41.925000000000004,
+        "12_18_months": 38.699999999999996,
+        "18_24_months": 35.475
+      }
+    },
+    {
+      "rangeLabel": "$63.51-$63.75",
+      "minInclusive": 63.51,
+      "maxInclusive": 63.75,
+      "salePriceAud": 64.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 45.324999999999996,
+        "6_12_months": 42.0875,
+        "12_18_months": 38.85,
+        "18_24_months": 35.612500000000004
+      }
+    },
+    {
+      "rangeLabel": "$63.76-$64.00",
+      "minInclusive": 63.76,
+      "maxInclusive": 64.0,
+      "salePriceAud": 65.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 45.5,
+        "6_12_months": 42.25,
+        "12_18_months": 39.0,
+        "18_24_months": 35.75
+      }
+    },
+    {
+      "rangeLabel": "$64.01-$64.25",
+      "minInclusive": 64.01,
+      "maxInclusive": 64.25,
+      "salePriceAud": 65.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 45.675,
+        "6_12_months": 42.4125,
+        "12_18_months": 39.15,
+        "18_24_months": 35.8875
+      }
+    },
+    {
+      "rangeLabel": "$64.26-$64.50",
+      "minInclusive": 64.26,
+      "maxInclusive": 64.5,
+      "salePriceAud": 65.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 45.849999999999994,
+        "6_12_months": 42.575,
+        "12_18_months": 39.3,
+        "18_24_months": 36.025000000000006
+      }
+    },
+    {
+      "rangeLabel": "$64.51-$64.75",
+      "minInclusive": 64.51,
+      "maxInclusive": 64.75,
+      "salePriceAud": 65.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 46.025,
+        "6_12_months": 42.737500000000004,
+        "12_18_months": 39.449999999999996,
+        "18_24_months": 36.1625
+      }
+    },
+    {
+      "rangeLabel": "$64.76-$65.00",
+      "minInclusive": 64.76,
+      "maxInclusive": 65.0,
+      "salePriceAud": 66.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 46.199999999999996,
+        "6_12_months": 42.9,
+        "12_18_months": 39.6,
+        "18_24_months": 36.300000000000004
+      }
+    },
+    {
+      "rangeLabel": "$65.01-$65.25",
+      "minInclusive": 65.01,
+      "maxInclusive": 65.25,
+      "salePriceAud": 66.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 46.375,
+        "6_12_months": 43.0625,
+        "12_18_months": 39.75,
+        "18_24_months": 36.4375
+      }
+    },
+    {
+      "rangeLabel": "$65.26-$65.50",
+      "minInclusive": 65.26,
+      "maxInclusive": 65.5,
+      "salePriceAud": 66.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 46.55,
+        "6_12_months": 43.225,
+        "12_18_months": 39.9,
+        "18_24_months": 36.575
+      }
+    },
+    {
+      "rangeLabel": "$65.51-$65.75",
+      "minInclusive": 65.51,
+      "maxInclusive": 65.75,
+      "salePriceAud": 66.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 46.724999999999994,
+        "6_12_months": 43.3875,
+        "12_18_months": 40.05,
+        "18_24_months": 36.712500000000006
+      }
+    },
+    {
+      "rangeLabel": "$65.76-$66.00",
+      "minInclusive": 65.76,
+      "maxInclusive": 66.0,
+      "salePriceAud": 67.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 46.9,
+        "6_12_months": 43.550000000000004,
+        "12_18_months": 40.199999999999996,
+        "18_24_months": 36.85
+      }
+    },
+    {
+      "rangeLabel": "$66.01-$66.25",
+      "minInclusive": 66.01,
+      "maxInclusive": 66.25,
+      "salePriceAud": 67.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 47.074999999999996,
+        "6_12_months": 43.7125,
+        "12_18_months": 40.35,
+        "18_24_months": 36.987500000000004
+      }
+    },
+    {
+      "rangeLabel": "$66.26-$66.50",
+      "minInclusive": 66.26,
+      "maxInclusive": 66.5,
+      "salePriceAud": 67.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 47.25,
+        "6_12_months": 43.875,
+        "12_18_months": 40.5,
+        "18_24_months": 37.125
+      }
+    },
+    {
+      "rangeLabel": "$66.51-$66.75",
+      "minInclusive": 66.51,
+      "maxInclusive": 66.75,
+      "salePriceAud": 67.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 47.425,
+        "6_12_months": 44.0375,
+        "12_18_months": 40.65,
+        "18_24_months": 37.2625
+      }
+    },
+    {
+      "rangeLabel": "$66.76-$67.00",
+      "minInclusive": 66.76,
+      "maxInclusive": 67.0,
+      "salePriceAud": 68.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 47.599999999999994,
+        "6_12_months": 44.2,
+        "12_18_months": 40.8,
+        "18_24_months": 37.400000000000006
+      }
+    },
+    {
+      "rangeLabel": "$67.01-$67.25",
+      "minInclusive": 67.01,
+      "maxInclusive": 67.25,
+      "salePriceAud": 68.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 47.775,
+        "6_12_months": 44.362500000000004,
+        "12_18_months": 40.949999999999996,
+        "18_24_months": 37.5375
+      }
+    },
+    {
+      "rangeLabel": "$67.26-$67.50",
+      "minInclusive": 67.26,
+      "maxInclusive": 67.5,
+      "salePriceAud": 68.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 47.949999999999996,
+        "6_12_months": 44.525,
+        "12_18_months": 41.1,
+        "18_24_months": 37.675000000000004
+      }
+    },
+    {
+      "rangeLabel": "$67.51-$67.75",
+      "minInclusive": 67.51,
+      "maxInclusive": 67.75,
+      "salePriceAud": 68.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 48.125,
+        "6_12_months": 44.6875,
+        "12_18_months": 41.25,
+        "18_24_months": 37.8125
+      }
+    },
+    {
+      "rangeLabel": "$67.76-$68.00",
+      "minInclusive": 67.76,
+      "maxInclusive": 68.0,
+      "salePriceAud": 69.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 48.3,
+        "6_12_months": 44.85,
+        "12_18_months": 41.4,
+        "18_24_months": 37.95
+      }
+    },
+    {
+      "rangeLabel": "$68.01-$68.25",
+      "minInclusive": 68.01,
+      "maxInclusive": 68.25,
+      "salePriceAud": 69.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 48.474999999999994,
+        "6_12_months": 45.0125,
+        "12_18_months": 41.55,
+        "18_24_months": 38.087500000000006
+      }
+    },
+    {
+      "rangeLabel": "$68.26-$68.50",
+      "minInclusive": 68.26,
+      "maxInclusive": 68.5,
+      "salePriceAud": 69.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 48.65,
+        "6_12_months": 45.175000000000004,
+        "12_18_months": 41.699999999999996,
+        "18_24_months": 38.225
+      }
+    },
+    {
+      "rangeLabel": "$68.51-$68.75",
+      "minInclusive": 68.51,
+      "maxInclusive": 68.75,
+      "salePriceAud": 69.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 48.824999999999996,
+        "6_12_months": 45.3375,
+        "12_18_months": 41.85,
+        "18_24_months": 38.362500000000004
+      }
+    },
+    {
+      "rangeLabel": "$68.76-$69.00",
+      "minInclusive": 68.76,
+      "maxInclusive": 69.0,
+      "salePriceAud": 70.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 49.0,
+        "6_12_months": 45.5,
+        "12_18_months": 42.0,
+        "18_24_months": 38.5
+      }
+    },
+    {
+      "rangeLabel": "$69.01-$69.25",
+      "minInclusive": 69.01,
+      "maxInclusive": 69.25,
+      "salePriceAud": 70.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 49.175,
+        "6_12_months": 45.6625,
+        "12_18_months": 42.15,
+        "18_24_months": 38.6375
+      }
+    },
+    {
+      "rangeLabel": "$69.26-$69.50",
+      "minInclusive": 69.26,
+      "maxInclusive": 69.5,
+      "salePriceAud": 70.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 49.349999999999994,
+        "6_12_months": 45.825,
+        "12_18_months": 42.3,
+        "18_24_months": 38.775000000000006
+      }
+    },
+    {
+      "rangeLabel": "$69.51-$69.75",
+      "minInclusive": 69.51,
+      "maxInclusive": 69.75,
+      "salePriceAud": 70.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 49.525,
+        "6_12_months": 45.987500000000004,
+        "12_18_months": 42.449999999999996,
+        "18_24_months": 38.9125
+      }
+    },
+    {
+      "rangeLabel": "$69.76-$70.00",
+      "minInclusive": 69.76,
+      "maxInclusive": 70.0,
+      "salePriceAud": 71.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 49.699999999999996,
+        "6_12_months": 46.15,
+        "12_18_months": 42.6,
+        "18_24_months": 39.050000000000004
+      }
+    },
+    {
+      "rangeLabel": "$70.01-$70.25",
+      "minInclusive": 70.01,
+      "maxInclusive": 70.25,
+      "salePriceAud": 71.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 49.875,
+        "6_12_months": 46.3125,
+        "12_18_months": 42.75,
+        "18_24_months": 39.1875
+      }
+    },
+    {
+      "rangeLabel": "$70.26-$70.50",
+      "minInclusive": 70.26,
+      "maxInclusive": 70.5,
+      "salePriceAud": 71.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 50.05,
+        "6_12_months": 46.475,
+        "12_18_months": 42.9,
+        "18_24_months": 39.325
+      }
+    },
+    {
+      "rangeLabel": "$70.51-$70.75",
+      "minInclusive": 70.51,
+      "maxInclusive": 70.75,
+      "salePriceAud": 71.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 50.224999999999994,
+        "6_12_months": 46.6375,
+        "12_18_months": 43.05,
+        "18_24_months": 39.462500000000006
+      }
+    },
+    {
+      "rangeLabel": "$70.76-$71.00",
+      "minInclusive": 70.76,
+      "maxInclusive": 71.0,
+      "salePriceAud": 72.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 50.4,
+        "6_12_months": 46.800000000000004,
+        "12_18_months": 43.199999999999996,
+        "18_24_months": 39.6
+      }
+    },
+    {
+      "rangeLabel": "$71.01-$71.25",
+      "minInclusive": 71.01,
+      "maxInclusive": 71.25,
+      "salePriceAud": 72.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 50.574999999999996,
+        "6_12_months": 46.9625,
+        "12_18_months": 43.35,
+        "18_24_months": 39.737500000000004
+      }
+    },
+    {
+      "rangeLabel": "$71.26-$71.50",
+      "minInclusive": 71.26,
+      "maxInclusive": 71.5,
+      "salePriceAud": 72.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 50.75,
+        "6_12_months": 47.125,
+        "12_18_months": 43.5,
+        "18_24_months": 39.875
+      }
+    },
+    {
+      "rangeLabel": "$71.51-$71.75",
+      "minInclusive": 71.51,
+      "maxInclusive": 71.75,
+      "salePriceAud": 72.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 50.925,
+        "6_12_months": 47.2875,
+        "12_18_months": 43.65,
+        "18_24_months": 40.0125
+      }
+    },
+    {
+      "rangeLabel": "$71.76-$72.00",
+      "minInclusive": 71.76,
+      "maxInclusive": 72.0,
+      "salePriceAud": 73.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 51.099999999999994,
+        "6_12_months": 47.45,
+        "12_18_months": 43.8,
+        "18_24_months": 40.150000000000006
+      }
+    },
+    {
+      "rangeLabel": "$72.01-$72.25",
+      "minInclusive": 72.01,
+      "maxInclusive": 72.25,
+      "salePriceAud": 73.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 51.275,
+        "6_12_months": 47.612500000000004,
+        "12_18_months": 43.949999999999996,
+        "18_24_months": 40.2875
+      }
+    },
+    {
+      "rangeLabel": "$72.26-$72.50",
+      "minInclusive": 72.26,
+      "maxInclusive": 72.5,
+      "salePriceAud": 73.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 51.449999999999996,
+        "6_12_months": 47.775,
+        "12_18_months": 44.1,
+        "18_24_months": 40.425000000000004
+      }
+    },
+    {
+      "rangeLabel": "$72.51-$72.75",
+      "minInclusive": 72.51,
+      "maxInclusive": 72.75,
+      "salePriceAud": 73.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 51.625,
+        "6_12_months": 47.9375,
+        "12_18_months": 44.25,
+        "18_24_months": 40.5625
+      }
+    },
+    {
+      "rangeLabel": "$72.76-$73.00",
+      "minInclusive": 72.76,
+      "maxInclusive": 73.0,
+      "salePriceAud": 74.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 51.8,
+        "6_12_months": 48.1,
+        "12_18_months": 44.4,
+        "18_24_months": 40.7
+      }
+    },
+    {
+      "rangeLabel": "$73.01-$73.25",
+      "minInclusive": 73.01,
+      "maxInclusive": 73.25,
+      "salePriceAud": 74.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 51.974999999999994,
+        "6_12_months": 48.2625,
+        "12_18_months": 44.55,
+        "18_24_months": 40.837500000000006
+      }
+    },
+    {
+      "rangeLabel": "$73.26-$73.50",
+      "minInclusive": 73.26,
+      "maxInclusive": 73.5,
+      "salePriceAud": 74.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 52.15,
+        "6_12_months": 48.425000000000004,
+        "12_18_months": 44.699999999999996,
+        "18_24_months": 40.975
+      }
+    },
+    {
+      "rangeLabel": "$73.51-$73.75",
+      "minInclusive": 73.51,
+      "maxInclusive": 73.75,
+      "salePriceAud": 74.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 52.324999999999996,
+        "6_12_months": 48.5875,
+        "12_18_months": 44.85,
+        "18_24_months": 41.112500000000004
+      }
+    },
+    {
+      "rangeLabel": "$73.76-$74.00",
+      "minInclusive": 73.76,
+      "maxInclusive": 74.0,
+      "salePriceAud": 75.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 52.5,
+        "6_12_months": 48.75,
+        "12_18_months": 45.0,
+        "18_24_months": 41.25
+      }
+    },
+    {
+      "rangeLabel": "$74.01-$74.25",
+      "minInclusive": 74.01,
+      "maxInclusive": 74.25,
+      "salePriceAud": 75.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 52.675,
+        "6_12_months": 48.9125,
+        "12_18_months": 45.15,
+        "18_24_months": 41.3875
+      }
+    },
+    {
+      "rangeLabel": "$74.26-$74.50",
+      "minInclusive": 74.26,
+      "maxInclusive": 74.5,
+      "salePriceAud": 75.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 52.849999999999994,
+        "6_12_months": 49.075,
+        "12_18_months": 45.3,
+        "18_24_months": 41.525000000000006
+      }
+    },
+    {
+      "rangeLabel": "$74.51-$74.75",
+      "minInclusive": 74.51,
+      "maxInclusive": 74.75,
+      "salePriceAud": 75.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 53.025,
+        "6_12_months": 49.237500000000004,
+        "12_18_months": 45.449999999999996,
+        "18_24_months": 41.6625
+      }
+    },
+    {
+      "rangeLabel": "$74.76-$75.00",
+      "minInclusive": 74.76,
+      "maxInclusive": 75.0,
+      "salePriceAud": 76.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 53.199999999999996,
+        "6_12_months": 49.4,
+        "12_18_months": 45.6,
+        "18_24_months": 41.800000000000004
+      }
+    },
+    {
+      "rangeLabel": "$75.01-$75.25",
+      "minInclusive": 75.01,
+      "maxInclusive": 75.25,
+      "salePriceAud": 76.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 53.375,
+        "6_12_months": 49.5625,
+        "12_18_months": 45.75,
+        "18_24_months": 41.9375
+      }
+    },
+    {
+      "rangeLabel": "$75.26-$75.50",
+      "minInclusive": 75.26,
+      "maxInclusive": 75.5,
+      "salePriceAud": 76.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 53.55,
+        "6_12_months": 49.725,
+        "12_18_months": 45.9,
+        "18_24_months": 42.075
+      }
+    },
+    {
+      "rangeLabel": "$75.51-$75.75",
+      "minInclusive": 75.51,
+      "maxInclusive": 75.75,
+      "salePriceAud": 76.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 53.724999999999994,
+        "6_12_months": 49.8875,
+        "12_18_months": 46.05,
+        "18_24_months": 42.212500000000006
+      }
+    },
+    {
+      "rangeLabel": "$75.76-$76.00",
+      "minInclusive": 75.76,
+      "maxInclusive": 76.0,
+      "salePriceAud": 77.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 53.9,
+        "6_12_months": 50.050000000000004,
+        "12_18_months": 46.199999999999996,
+        "18_24_months": 42.35
+      }
+    },
+    {
+      "rangeLabel": "$76.01-$76.25",
+      "minInclusive": 76.01,
+      "maxInclusive": 76.25,
+      "salePriceAud": 77.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 54.074999999999996,
+        "6_12_months": 50.2125,
+        "12_18_months": 46.35,
+        "18_24_months": 42.487500000000004
+      }
+    },
+    {
+      "rangeLabel": "$76.26-$76.50",
+      "minInclusive": 76.26,
+      "maxInclusive": 76.5,
+      "salePriceAud": 77.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 54.25,
+        "6_12_months": 50.375,
+        "12_18_months": 46.5,
+        "18_24_months": 42.625
+      }
+    },
+    {
+      "rangeLabel": "$76.51-$76.75",
+      "minInclusive": 76.51,
+      "maxInclusive": 76.75,
+      "salePriceAud": 77.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 54.425,
+        "6_12_months": 50.5375,
+        "12_18_months": 46.65,
+        "18_24_months": 42.7625
+      }
+    },
+    {
+      "rangeLabel": "$76.76-$77.00",
+      "minInclusive": 76.76,
+      "maxInclusive": 77.0,
+      "salePriceAud": 78.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 54.599999999999994,
+        "6_12_months": 50.7,
+        "12_18_months": 46.8,
+        "18_24_months": 42.900000000000006
+      }
+    },
+    {
+      "rangeLabel": "$77.01-$77.25",
+      "minInclusive": 77.01,
+      "maxInclusive": 77.25,
+      "salePriceAud": 78.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 54.775,
+        "6_12_months": 50.862500000000004,
+        "12_18_months": 46.949999999999996,
+        "18_24_months": 43.0375
+      }
+    },
+    {
+      "rangeLabel": "$77.26-$77.50",
+      "minInclusive": 77.26,
+      "maxInclusive": 77.5,
+      "salePriceAud": 78.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 54.949999999999996,
+        "6_12_months": 51.025,
+        "12_18_months": 47.1,
+        "18_24_months": 43.175000000000004
+      }
+    },
+    {
+      "rangeLabel": "$77.51-$77.75",
+      "minInclusive": 77.51,
+      "maxInclusive": 77.75,
+      "salePriceAud": 78.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 55.125,
+        "6_12_months": 51.1875,
+        "12_18_months": 47.25,
+        "18_24_months": 43.3125
+      }
+    },
+    {
+      "rangeLabel": "$77.76-$78.00",
+      "minInclusive": 77.76,
+      "maxInclusive": 78.0,
+      "salePriceAud": 79.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 55.3,
+        "6_12_months": 51.35,
+        "12_18_months": 47.4,
+        "18_24_months": 43.45
+      }
+    },
+    {
+      "rangeLabel": "$78.01-$78.25",
+      "minInclusive": 78.01,
+      "maxInclusive": 78.25,
+      "salePriceAud": 79.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 55.474999999999994,
+        "6_12_months": 51.5125,
+        "12_18_months": 47.55,
+        "18_24_months": 43.587500000000006
+      }
+    },
+    {
+      "rangeLabel": "$78.26-$78.50",
+      "minInclusive": 78.26,
+      "maxInclusive": 78.5,
+      "salePriceAud": 79.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 55.65,
+        "6_12_months": 51.675000000000004,
+        "12_18_months": 47.699999999999996,
+        "18_24_months": 43.725
+      }
+    },
+    {
+      "rangeLabel": "$78.51-$78.75",
+      "minInclusive": 78.51,
+      "maxInclusive": 78.75,
+      "salePriceAud": 79.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 55.824999999999996,
+        "6_12_months": 51.8375,
+        "12_18_months": 47.85,
+        "18_24_months": 43.862500000000004
+      }
+    },
+    {
+      "rangeLabel": "$78.76-$79.00",
+      "minInclusive": 78.76,
+      "maxInclusive": 79.0,
+      "salePriceAud": 80.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 56.0,
+        "6_12_months": 52.0,
+        "12_18_months": 48.0,
+        "18_24_months": 44.0
+      }
+    },
+    {
+      "rangeLabel": "$79.01-$79.25",
+      "minInclusive": 79.01,
+      "maxInclusive": 79.25,
+      "salePriceAud": 80.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 56.175,
+        "6_12_months": 52.1625,
+        "12_18_months": 48.15,
+        "18_24_months": 44.1375
+      }
+    },
+    {
+      "rangeLabel": "$79.26-$79.50",
+      "minInclusive": 79.26,
+      "maxInclusive": 79.5,
+      "salePriceAud": 80.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 56.349999999999994,
+        "6_12_months": 52.325,
+        "12_18_months": 48.3,
+        "18_24_months": 44.275000000000006
+      }
+    },
+    {
+      "rangeLabel": "$79.51-$79.75",
+      "minInclusive": 79.51,
+      "maxInclusive": 79.75,
+      "salePriceAud": 80.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 56.525,
+        "6_12_months": 52.487500000000004,
+        "12_18_months": 48.449999999999996,
+        "18_24_months": 44.4125
+      }
+    },
+    {
+      "rangeLabel": "$79.76-$80.00",
+      "minInclusive": 79.76,
+      "maxInclusive": 80.0,
+      "salePriceAud": 81.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 56.699999999999996,
+        "6_12_months": 52.65,
+        "12_18_months": 48.6,
+        "18_24_months": 44.550000000000004
+      }
+    },
+    {
+      "rangeLabel": "$80.01-$80.25",
+      "minInclusive": 80.01,
+      "maxInclusive": 80.25,
+      "salePriceAud": 81.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 56.87499999999999,
+        "6_12_months": 52.8125,
+        "12_18_months": 48.75,
+        "18_24_months": 44.68750000000001
+      }
+    },
+    {
+      "rangeLabel": "$80.26-$80.50",
+      "minInclusive": 80.26,
+      "maxInclusive": 80.5,
+      "salePriceAud": 81.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 57.05,
+        "6_12_months": 52.975,
+        "12_18_months": 48.9,
+        "18_24_months": 44.825
+      }
+    },
+    {
+      "rangeLabel": "$80.51-$80.75",
+      "minInclusive": 80.51,
+      "maxInclusive": 80.75,
+      "salePriceAud": 81.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 57.224999999999994,
+        "6_12_months": 53.1375,
+        "12_18_months": 49.05,
+        "18_24_months": 44.962500000000006
+      }
+    },
+    {
+      "rangeLabel": "$80.76-$81.00",
+      "minInclusive": 80.76,
+      "maxInclusive": 81.0,
+      "salePriceAud": 82.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 57.4,
+        "6_12_months": 53.300000000000004,
+        "12_18_months": 49.199999999999996,
+        "18_24_months": 45.1
+      }
+    },
+    {
+      "rangeLabel": "$81.01-$81.25",
+      "minInclusive": 81.01,
+      "maxInclusive": 81.25,
+      "salePriceAud": 82.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 57.574999999999996,
+        "6_12_months": 53.4625,
+        "12_18_months": 49.35,
+        "18_24_months": 45.237500000000004
+      }
+    },
+    {
+      "rangeLabel": "$81.26-$81.50",
+      "minInclusive": 81.26,
+      "maxInclusive": 81.5,
+      "salePriceAud": 82.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 57.74999999999999,
+        "6_12_months": 53.625,
+        "12_18_months": 49.5,
+        "18_24_months": 45.37500000000001
+      }
+    },
+    {
+      "rangeLabel": "$81.51-$81.75",
+      "minInclusive": 81.51,
+      "maxInclusive": 81.75,
+      "salePriceAud": 82.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 57.925,
+        "6_12_months": 53.7875,
+        "12_18_months": 49.65,
+        "18_24_months": 45.5125
+      }
+    },
+    {
+      "rangeLabel": "$81.76-$82.00",
+      "minInclusive": 81.76,
+      "maxInclusive": 82.0,
+      "salePriceAud": 83.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 58.099999999999994,
+        "6_12_months": 53.95,
+        "12_18_months": 49.8,
+        "18_24_months": 45.650000000000006
+      }
+    },
+    {
+      "rangeLabel": "$82.01-$82.25",
+      "minInclusive": 82.01,
+      "maxInclusive": 82.25,
+      "salePriceAud": 83.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 58.275,
+        "6_12_months": 54.112500000000004,
+        "12_18_months": 49.949999999999996,
+        "18_24_months": 45.7875
+      }
+    },
+    {
+      "rangeLabel": "$82.26-$82.50",
+      "minInclusive": 82.26,
+      "maxInclusive": 82.5,
+      "salePriceAud": 83.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 58.449999999999996,
+        "6_12_months": 54.275,
+        "12_18_months": 50.1,
+        "18_24_months": 45.925000000000004
+      }
+    },
+    {
+      "rangeLabel": "$82.51-$82.75",
+      "minInclusive": 82.51,
+      "maxInclusive": 82.75,
+      "salePriceAud": 83.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 58.62499999999999,
+        "6_12_months": 54.4375,
+        "12_18_months": 50.25,
+        "18_24_months": 46.06250000000001
+      }
+    },
+    {
+      "rangeLabel": "$82.76-$83.00",
+      "minInclusive": 82.76,
+      "maxInclusive": 83.0,
+      "salePriceAud": 84.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 58.8,
+        "6_12_months": 54.6,
+        "12_18_months": 50.4,
+        "18_24_months": 46.2
+      }
+    },
+    {
+      "rangeLabel": "$83.01-$83.25",
+      "minInclusive": 83.01,
+      "maxInclusive": 83.25,
+      "salePriceAud": 84.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 58.974999999999994,
+        "6_12_months": 54.7625,
+        "12_18_months": 50.55,
+        "18_24_months": 46.337500000000006
+      }
+    },
+    {
+      "rangeLabel": "$83.26-$83.50",
+      "minInclusive": 83.26,
+      "maxInclusive": 83.5,
+      "salePriceAud": 84.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 59.15,
+        "6_12_months": 54.925000000000004,
+        "12_18_months": 50.699999999999996,
+        "18_24_months": 46.475
+      }
+    },
+    {
+      "rangeLabel": "$83.51-$83.75",
+      "minInclusive": 83.51,
+      "maxInclusive": 83.75,
+      "salePriceAud": 84.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 59.324999999999996,
+        "6_12_months": 55.0875,
+        "12_18_months": 50.85,
+        "18_24_months": 46.612500000000004
+      }
+    },
+    {
+      "rangeLabel": "$83.76-$84.00",
+      "minInclusive": 83.76,
+      "maxInclusive": 84.0,
+      "salePriceAud": 85.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 59.49999999999999,
+        "6_12_months": 55.25,
+        "12_18_months": 51.0,
+        "18_24_months": 46.75000000000001
+      }
+    },
+    {
+      "rangeLabel": "$84.01-$84.25",
+      "minInclusive": 84.01,
+      "maxInclusive": 84.25,
+      "salePriceAud": 85.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 59.675,
+        "6_12_months": 55.4125,
+        "12_18_months": 51.15,
+        "18_24_months": 46.8875
+      }
+    },
+    {
+      "rangeLabel": "$84.26-$84.50",
+      "minInclusive": 84.26,
+      "maxInclusive": 84.5,
+      "salePriceAud": 85.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 59.849999999999994,
+        "6_12_months": 55.575,
+        "12_18_months": 51.3,
+        "18_24_months": 47.025000000000006
+      }
+    },
+    {
+      "rangeLabel": "$84.51-$84.75",
+      "minInclusive": 84.51,
+      "maxInclusive": 84.75,
+      "salePriceAud": 85.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 60.025,
+        "6_12_months": 55.737500000000004,
+        "12_18_months": 51.449999999999996,
+        "18_24_months": 47.1625
+      }
+    },
+    {
+      "rangeLabel": "$84.76-$85.00",
+      "minInclusive": 84.76,
+      "maxInclusive": 85.0,
+      "salePriceAud": 86.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 60.199999999999996,
+        "6_12_months": 55.9,
+        "12_18_months": 51.6,
+        "18_24_months": 47.300000000000004
+      }
+    },
+    {
+      "rangeLabel": "$85.01-$85.25",
+      "minInclusive": 85.01,
+      "maxInclusive": 85.25,
+      "salePriceAud": 86.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 60.37499999999999,
+        "6_12_months": 56.0625,
+        "12_18_months": 51.75,
+        "18_24_months": 47.43750000000001
+      }
+    },
+    {
+      "rangeLabel": "$85.26-$85.50",
+      "minInclusive": 85.26,
+      "maxInclusive": 85.5,
+      "salePriceAud": 86.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 60.55,
+        "6_12_months": 56.225,
+        "12_18_months": 51.9,
+        "18_24_months": 47.575
+      }
+    },
+    {
+      "rangeLabel": "$85.51-$85.75",
+      "minInclusive": 85.51,
+      "maxInclusive": 85.75,
+      "salePriceAud": 86.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 60.724999999999994,
+        "6_12_months": 56.3875,
+        "12_18_months": 52.05,
+        "18_24_months": 47.712500000000006
+      }
+    },
+    {
+      "rangeLabel": "$85.76-$86.00",
+      "minInclusive": 85.76,
+      "maxInclusive": 86.0,
+      "salePriceAud": 87.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 60.9,
+        "6_12_months": 56.550000000000004,
+        "12_18_months": 52.199999999999996,
+        "18_24_months": 47.85
+      }
+    },
+    {
+      "rangeLabel": "$86.01-$86.25",
+      "minInclusive": 86.01,
+      "maxInclusive": 86.25,
+      "salePriceAud": 87.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 61.074999999999996,
+        "6_12_months": 56.7125,
+        "12_18_months": 52.35,
+        "18_24_months": 47.987500000000004
+      }
+    },
+    {
+      "rangeLabel": "$86.26-$86.50",
+      "minInclusive": 86.26,
+      "maxInclusive": 86.5,
+      "salePriceAud": 87.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 61.24999999999999,
+        "6_12_months": 56.875,
+        "12_18_months": 52.5,
+        "18_24_months": 48.12500000000001
+      }
+    },
+    {
+      "rangeLabel": "$86.51-$86.75",
+      "minInclusive": 86.51,
+      "maxInclusive": 86.75,
+      "salePriceAud": 87.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 61.425,
+        "6_12_months": 57.0375,
+        "12_18_months": 52.65,
+        "18_24_months": 48.2625
+      }
+    },
+    {
+      "rangeLabel": "$86.76-$87.00",
+      "minInclusive": 86.76,
+      "maxInclusive": 87.0,
+      "salePriceAud": 88.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 61.599999999999994,
+        "6_12_months": 57.2,
+        "12_18_months": 52.8,
+        "18_24_months": 48.400000000000006
+      }
+    },
+    {
+      "rangeLabel": "$87.01-$87.25",
+      "minInclusive": 87.01,
+      "maxInclusive": 87.25,
+      "salePriceAud": 88.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 61.775,
+        "6_12_months": 57.362500000000004,
+        "12_18_months": 52.949999999999996,
+        "18_24_months": 48.5375
+      }
+    },
+    {
+      "rangeLabel": "$87.26-$87.50",
+      "minInclusive": 87.26,
+      "maxInclusive": 87.5,
+      "salePriceAud": 88.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 61.949999999999996,
+        "6_12_months": 57.525,
+        "12_18_months": 53.1,
+        "18_24_months": 48.675000000000004
+      }
+    },
+    {
+      "rangeLabel": "$87.51-$87.75",
+      "minInclusive": 87.51,
+      "maxInclusive": 87.75,
+      "salePriceAud": 88.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 62.12499999999999,
+        "6_12_months": 57.6875,
+        "12_18_months": 53.25,
+        "18_24_months": 48.81250000000001
+      }
+    },
+    {
+      "rangeLabel": "$87.76-$88.00",
+      "minInclusive": 87.76,
+      "maxInclusive": 88.0,
+      "salePriceAud": 89.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 62.3,
+        "6_12_months": 57.85,
+        "12_18_months": 53.4,
+        "18_24_months": 48.95
+      }
+    },
+    {
+      "rangeLabel": "$88.01-$88.25",
+      "minInclusive": 88.01,
+      "maxInclusive": 88.25,
+      "salePriceAud": 89.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 62.474999999999994,
+        "6_12_months": 58.0125,
+        "12_18_months": 53.55,
+        "18_24_months": 49.087500000000006
+      }
+    },
+    {
+      "rangeLabel": "$88.26-$88.50",
+      "minInclusive": 88.26,
+      "maxInclusive": 88.5,
+      "salePriceAud": 89.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 62.65,
+        "6_12_months": 58.175000000000004,
+        "12_18_months": 53.699999999999996,
+        "18_24_months": 49.225
+      }
+    },
+    {
+      "rangeLabel": "$88.51-$88.75",
+      "minInclusive": 88.51,
+      "maxInclusive": 88.75,
+      "salePriceAud": 89.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 62.824999999999996,
+        "6_12_months": 58.3375,
+        "12_18_months": 53.85,
+        "18_24_months": 49.362500000000004
+      }
+    },
+    {
+      "rangeLabel": "$88.76-$89.00",
+      "minInclusive": 88.76,
+      "maxInclusive": 89.0,
+      "salePriceAud": 90.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 62.99999999999999,
+        "6_12_months": 58.5,
+        "12_18_months": 54.0,
+        "18_24_months": 49.50000000000001
+      }
+    },
+    {
+      "rangeLabel": "$89.01-$89.25",
+      "minInclusive": 89.01,
+      "maxInclusive": 89.25,
+      "salePriceAud": 90.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 63.175,
+        "6_12_months": 58.6625,
+        "12_18_months": 54.15,
+        "18_24_months": 49.6375
+      }
+    },
+    {
+      "rangeLabel": "$89.26-$89.50",
+      "minInclusive": 89.26,
+      "maxInclusive": 89.5,
+      "salePriceAud": 90.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 63.349999999999994,
+        "6_12_months": 58.825,
+        "12_18_months": 54.3,
+        "18_24_months": 49.775000000000006
+      }
+    },
+    {
+      "rangeLabel": "$89.51-$89.75",
+      "minInclusive": 89.51,
+      "maxInclusive": 89.75,
+      "salePriceAud": 90.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 63.525,
+        "6_12_months": 58.987500000000004,
+        "12_18_months": 54.449999999999996,
+        "18_24_months": 49.9125
+      }
+    },
+    {
+      "rangeLabel": "$89.76-$90.00",
+      "minInclusive": 89.76,
+      "maxInclusive": 90.0,
+      "salePriceAud": 91.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 63.699999999999996,
+        "6_12_months": 59.15,
+        "12_18_months": 54.6,
+        "18_24_months": 50.050000000000004
+      }
+    },
+    {
+      "rangeLabel": "$90.01-$90.25",
+      "minInclusive": 90.01,
+      "maxInclusive": 90.25,
+      "salePriceAud": 91.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 63.87499999999999,
+        "6_12_months": 59.3125,
+        "12_18_months": 54.75,
+        "18_24_months": 50.18750000000001
+      }
+    },
+    {
+      "rangeLabel": "$90.26-$90.50",
+      "minInclusive": 90.26,
+      "maxInclusive": 90.5,
+      "salePriceAud": 91.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 64.05,
+        "6_12_months": 59.475,
+        "12_18_months": 54.9,
+        "18_24_months": 50.325
+      }
+    },
+    {
+      "rangeLabel": "$90.51-$90.75",
+      "minInclusive": 90.51,
+      "maxInclusive": 90.75,
+      "salePriceAud": 91.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 64.225,
+        "6_12_months": 59.6375,
+        "12_18_months": 55.05,
+        "18_24_months": 50.462500000000006
+      }
+    },
+    {
+      "rangeLabel": "$90.76-$91.00",
+      "minInclusive": 90.76,
+      "maxInclusive": 91.0,
+      "salePriceAud": 92.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 64.39999999999999,
+        "6_12_months": 59.800000000000004,
+        "12_18_months": 55.199999999999996,
+        "18_24_months": 50.6
+      }
+    },
+    {
+      "rangeLabel": "$91.01-$91.25",
+      "minInclusive": 91.01,
+      "maxInclusive": 91.25,
+      "salePriceAud": 92.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 64.575,
+        "6_12_months": 59.9625,
+        "12_18_months": 55.35,
+        "18_24_months": 50.737500000000004
+      }
+    },
+    {
+      "rangeLabel": "$91.26-$91.50",
+      "minInclusive": 91.26,
+      "maxInclusive": 91.5,
+      "salePriceAud": 92.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 64.75,
+        "6_12_months": 60.125,
+        "12_18_months": 55.5,
+        "18_24_months": 50.87500000000001
+      }
+    },
+    {
+      "rangeLabel": "$91.51-$91.75",
+      "minInclusive": 91.51,
+      "maxInclusive": 91.75,
+      "salePriceAud": 92.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 64.925,
+        "6_12_months": 60.2875,
+        "12_18_months": 55.65,
+        "18_24_months": 51.0125
+      }
+    },
+    {
+      "rangeLabel": "$91.76-$92.00",
+      "minInclusive": 91.76,
+      "maxInclusive": 92.0,
+      "salePriceAud": 93.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 65.1,
+        "6_12_months": 60.45,
+        "12_18_months": 55.8,
+        "18_24_months": 51.150000000000006
+      }
+    },
+    {
+      "rangeLabel": "$92.01-$92.25",
+      "minInclusive": 92.01,
+      "maxInclusive": 92.25,
+      "salePriceAud": 93.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 65.27499999999999,
+        "6_12_months": 60.612500000000004,
+        "12_18_months": 55.949999999999996,
+        "18_24_months": 51.2875
+      }
+    },
+    {
+      "rangeLabel": "$92.26-$92.50",
+      "minInclusive": 92.26,
+      "maxInclusive": 92.5,
+      "salePriceAud": 93.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 65.45,
+        "6_12_months": 60.775,
+        "12_18_months": 56.1,
+        "18_24_months": 51.425000000000004
+      }
+    },
+    {
+      "rangeLabel": "$92.51-$92.75",
+      "minInclusive": 92.51,
+      "maxInclusive": 92.75,
+      "salePriceAud": 93.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 65.625,
+        "6_12_months": 60.9375,
+        "12_18_months": 56.25,
+        "18_24_months": 51.56250000000001
+      }
+    },
+    {
+      "rangeLabel": "$92.76-$93.00",
+      "minInclusive": 92.76,
+      "maxInclusive": 93.0,
+      "salePriceAud": 94.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 65.8,
+        "6_12_months": 61.1,
+        "12_18_months": 56.4,
+        "18_24_months": 51.7
+      }
+    },
+    {
+      "rangeLabel": "$93.01-$93.25",
+      "minInclusive": 93.01,
+      "maxInclusive": 93.25,
+      "salePriceAud": 94.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 65.975,
+        "6_12_months": 61.2625,
+        "12_18_months": 56.55,
+        "18_24_months": 51.837500000000006
+      }
+    },
+    {
+      "rangeLabel": "$93.26-$93.50",
+      "minInclusive": 93.26,
+      "maxInclusive": 93.5,
+      "salePriceAud": 94.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 66.14999999999999,
+        "6_12_months": 61.425000000000004,
+        "12_18_months": 56.699999999999996,
+        "18_24_months": 51.975
+      }
+    },
+    {
+      "rangeLabel": "$93.51-$93.75",
+      "minInclusive": 93.51,
+      "maxInclusive": 93.75,
+      "salePriceAud": 94.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 66.325,
+        "6_12_months": 61.5875,
+        "12_18_months": 56.85,
+        "18_24_months": 52.112500000000004
+      }
+    },
+    {
+      "rangeLabel": "$93.76-$94.00",
+      "minInclusive": 93.76,
+      "maxInclusive": 94.0,
+      "salePriceAud": 95.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 66.5,
+        "6_12_months": 61.75,
+        "12_18_months": 57.0,
+        "18_24_months": 52.25000000000001
+      }
+    },
+    {
+      "rangeLabel": "$94.01-$94.25",
+      "minInclusive": 94.01,
+      "maxInclusive": 94.25,
+      "salePriceAud": 95.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 66.675,
+        "6_12_months": 61.9125,
+        "12_18_months": 57.15,
+        "18_24_months": 52.3875
+      }
+    },
+    {
+      "rangeLabel": "$94.26-$94.50",
+      "minInclusive": 94.26,
+      "maxInclusive": 94.5,
+      "salePriceAud": 95.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 66.85,
+        "6_12_months": 62.075,
+        "12_18_months": 57.3,
+        "18_24_months": 52.525000000000006
+      }
+    },
+    {
+      "rangeLabel": "$94.51-$94.75",
+      "minInclusive": 94.51,
+      "maxInclusive": 94.75,
+      "salePriceAud": 95.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 67.02499999999999,
+        "6_12_months": 62.237500000000004,
+        "12_18_months": 57.449999999999996,
+        "18_24_months": 52.6625
+      }
+    },
+    {
+      "rangeLabel": "$94.76-$95.00",
+      "minInclusive": 94.76,
+      "maxInclusive": 95.0,
+      "salePriceAud": 96.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 67.19999999999999,
+        "6_12_months": 62.400000000000006,
+        "12_18_months": 57.599999999999994,
+        "18_24_months": 52.800000000000004
+      }
+    },
+    {
+      "rangeLabel": "$95.01-$95.25",
+      "minInclusive": 95.01,
+      "maxInclusive": 95.25,
+      "salePriceAud": 96.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 67.375,
+        "6_12_months": 62.5625,
+        "12_18_months": 57.75,
+        "18_24_months": 52.93750000000001
+      }
+    },
+    {
+      "rangeLabel": "$95.26-$95.50",
+      "minInclusive": 95.26,
+      "maxInclusive": 95.5,
+      "salePriceAud": 96.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 67.55,
+        "6_12_months": 62.725,
+        "12_18_months": 57.9,
+        "18_24_months": 53.075
+      }
+    },
+    {
+      "rangeLabel": "$95.51-$95.75",
+      "minInclusive": 95.51,
+      "maxInclusive": 95.75,
+      "salePriceAud": 96.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 67.725,
+        "6_12_months": 62.8875,
+        "12_18_months": 58.05,
+        "18_24_months": 53.212500000000006
+      }
+    },
+    {
+      "rangeLabel": "$95.76-$96.00",
+      "minInclusive": 95.76,
+      "maxInclusive": 96.0,
+      "salePriceAud": 97.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 67.89999999999999,
+        "6_12_months": 63.050000000000004,
+        "12_18_months": 58.199999999999996,
+        "18_24_months": 53.35
+      }
+    },
+    {
+      "rangeLabel": "$96.01-$96.25",
+      "minInclusive": 96.01,
+      "maxInclusive": 96.25,
+      "salePriceAud": 97.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 68.07499999999999,
+        "6_12_months": 63.212500000000006,
+        "12_18_months": 58.349999999999994,
+        "18_24_months": 53.487500000000004
+      }
+    },
+    {
+      "rangeLabel": "$96.26-$96.50",
+      "minInclusive": 96.26,
+      "maxInclusive": 96.5,
+      "salePriceAud": 97.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 68.25,
+        "6_12_months": 63.375,
+        "12_18_months": 58.5,
+        "18_24_months": 53.62500000000001
+      }
+    },
+    {
+      "rangeLabel": "$96.51-$96.75",
+      "minInclusive": 96.51,
+      "maxInclusive": 96.75,
+      "salePriceAud": 97.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 68.425,
+        "6_12_months": 63.5375,
+        "12_18_months": 58.65,
+        "18_24_months": 53.7625
+      }
+    },
+    {
+      "rangeLabel": "$96.76-$97.00",
+      "minInclusive": 96.76,
+      "maxInclusive": 97.0,
+      "salePriceAud": 98.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 68.6,
+        "6_12_months": 63.7,
+        "12_18_months": 58.8,
+        "18_24_months": 53.900000000000006
+      }
+    },
+    {
+      "rangeLabel": "$97.01-$97.25",
+      "minInclusive": 97.01,
+      "maxInclusive": 97.25,
+      "salePriceAud": 98.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 68.77499999999999,
+        "6_12_months": 63.862500000000004,
+        "12_18_months": 58.949999999999996,
+        "18_24_months": 54.0375
+      }
+    },
+    {
+      "rangeLabel": "$97.26-$97.50",
+      "minInclusive": 97.26,
+      "maxInclusive": 97.5,
+      "salePriceAud": 98.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 68.94999999999999,
+        "6_12_months": 64.025,
+        "12_18_months": 59.099999999999994,
+        "18_24_months": 54.175000000000004
+      }
+    },
+    {
+      "rangeLabel": "$97.51-$97.75",
+      "minInclusive": 97.51,
+      "maxInclusive": 97.75,
+      "salePriceAud": 98.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 69.125,
+        "6_12_months": 64.1875,
+        "12_18_months": 59.25,
+        "18_24_months": 54.31250000000001
+      }
+    },
+    {
+      "rangeLabel": "$97.76-$98.00",
+      "minInclusive": 97.76,
+      "maxInclusive": 98.0,
+      "salePriceAud": 99.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 69.3,
+        "6_12_months": 64.35000000000001,
+        "12_18_months": 59.4,
+        "18_24_months": 54.45
+      }
+    },
+    {
+      "rangeLabel": "$98.01-$98.25",
+      "minInclusive": 98.01,
+      "maxInclusive": 98.25,
+      "salePriceAud": 99.25,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 69.475,
+        "6_12_months": 64.5125,
+        "12_18_months": 59.55,
+        "18_24_months": 54.587500000000006
+      }
+    },
+    {
+      "rangeLabel": "$98.26-$98.50",
+      "minInclusive": 98.26,
+      "maxInclusive": 98.5,
+      "salePriceAud": 99.5,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 69.64999999999999,
+        "6_12_months": 64.675,
+        "12_18_months": 59.699999999999996,
+        "18_24_months": 54.725
+      }
+    },
+    {
+      "rangeLabel": "$98.51-$98.75",
+      "minInclusive": 98.51,
+      "maxInclusive": 98.75,
+      "salePriceAud": 99.75,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 69.82499999999999,
+        "6_12_months": 64.8375,
+        "12_18_months": 59.849999999999994,
+        "18_24_months": 54.862500000000004
+      }
+    },
+    {
+      "rangeLabel": "$98.76-$99.00",
+      "minInclusive": 98.76,
+      "maxInclusive": 99.0,
+      "salePriceAud": 100.0,
+      "payoutShare": {
+        "0_6_months": 0.7,
+        "6_12_months": 0.65,
+        "12_18_months": 0.6,
+        "18_24_months": 0.55
+      },
+      "payoutAud": {
+        "0_6_months": 70.0,
+        "6_12_months": 65.0,
+        "12_18_months": 60.0,
+        "18_24_months": 55.00000000000001
+      }
+    }
+  ]
+}
