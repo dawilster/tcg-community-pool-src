@@ -1,3 +1,3 @@
 Source snapshot used to production-deploy TCG Community Pool to Vercel.
-Parts: 16.
-Commit: 64d3e42 Drop Scryfall from Collect shopper coverage copy.
+Parts: 28.
+Commit: cbae034 Ship signed-off prototype rasters on the shop floor.
